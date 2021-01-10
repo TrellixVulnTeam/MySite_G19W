@@ -1,0 +1,18 @@
+.heading-primary {
+  letter-spacing: 5px;
+  font-size: 5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: movInLeft 2s ease;
+  backface-visibility: hidden;
+}
+.heading-secondary {
+  letter-spacing: 0.15rem;
+  font-size: 1.8rem;
+  max-width: 40rem;
+  margin: auto;
+  margin-bottom: 5rem;
+  line-height: 4rem;
+  animation: moveFromRight 2s ease;
+}

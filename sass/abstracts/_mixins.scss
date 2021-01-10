@@ -1,0 +1,9 @@
+// clear floats for the col
+@mixin clearfix {
+  &::after {
+    // clearfix will append a pseudo element after the element which clears the float
+    content: "";
+    display: table; // this can be even blocl, but table is just a standard
+    clear: both; // clears both float left and right
+  }
+}

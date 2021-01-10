@@ -1,0 +1,186 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* root font-size */
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 0.2rem; }
+
+.heading-primary {
+  letter-spacing: 5px;
+  font-size: 5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: movInLeft 2s ease;
+  backface-visibility: hidden; }
+
+.heading-secondary {
+  letter-spacing: 0.15rem;
+  font-size: 1.8rem;
+  max-width: 40rem;
+  margin: auto;
+  margin-bottom: 5rem;
+  line-height: 4rem;
+  animation: moveFromRight 2s ease; }
+
+@keyframes movInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-70rem); }
+  75% {
+    opacity: 1;
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40rem); }
+  75% {
+    opacity: 1;
+    transform: translateY(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40rem); }
+  75% {
+    opacity: 1;
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20rem); }
+  75% {
+    opacity: 1;
+    transform: translateY(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #712da8, rgba(9, 158, 22, 0.6)), url(../images/header_bg_2.jpg);
+  background-size: cover;
+  background-position: top; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    color: #ffffff;
+    padding: 5rem; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    margin: 5rem;
+    animation: moveFromTop 2s ease; }
+  .header__logo {
+    height: 7rem; }
+
+.btn {
+  display: inline-block; }
+  .btn:link, .btn:visited {
+    margin-bottom: 2rem;
+    text-decoration: none;
+    padding: 2rem 4rem;
+    border-radius: 10rem;
+    transform: translateY(0px);
+    font-size: 1.5rem;
+    transition: all 0.4s; }
+  .btn:hover {
+    transform: translateY(-0.3rem); }
+  .btn:active {
+    box-shadow: 0 0.5rem 1rem #000, 0.4;
+    margin-bottom: 2rem;
+    transform: translateY(0.2rem); }
+  .btn--orange:link, .btn--orange:visited {
+    background-color: #ec7717;
+    box-shadow: 0 0.5rem 0.4rem #000, 0.4;
+    color: whitesmoke;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    animation: moveFromBottom 2s ease; }
+    .btn--orange:link:hover, .btn--orange:visited:hover {
+      background-color: #e7822e;
+      font-weight: bold; }
+    .btn--orange:link::after, .btn--orange:visited::after {
+      display: inline-block;
+      content: "\2192";
+      width: 2rem;
+      padding: 0 0.2rem;
+      font-size: 1.2rem; }
+    .btn--orange:link:hover::after, .btn--orange:visited:hover::after {
+      content: "\2193";
+      width: 2rem; }
+
+.heading-primary {
+  letter-spacing: 5px;
+  font-size: 5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: movInLeft 2s ease;
+  backface-visibility: hidden; }
+
+.heading-secondary {
+  letter-spacing: 0.15rem;
+  font-size: 1.8rem;
+  max-width: 40rem;
+  margin: auto;
+  margin-bottom: 5rem;
+  line-height: 4rem;
+  animation: moveFromRight 2s ease; }
+
+.row {
+  max-width: 114rem;
+  background-color: #777;
+  color: #ffffff;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 *6rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 *6rem) / 4); }
+  .row .col-2-of-3 {
+    width: calc( (2 * (100% - 2 *6rem) / 3) + 6rem); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 *6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( (3 * ((100% - 3 *6rem) / 4)) + 2 *6rem); }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }

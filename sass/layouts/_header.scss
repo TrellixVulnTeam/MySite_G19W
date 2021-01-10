@@ -1,0 +1,33 @@
+.header {
+  position: relative;
+  height: 100vh;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-dark, 1),
+      rgba($color-primary-light, 0.6)
+    ),
+    url(../images/header_bg_2.jpg);
+  background-size: cover;
+  background-position: top;
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    color: $color-white;
+    padding: 5rem;
+  }
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    margin: 5rem;
+    animation: moveFromTop 2s ease;
+  }
+  &__logo {
+    height: 7rem;
+  }
+}
