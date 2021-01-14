@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Sandeep Amarnath</title>
   </head>
@@ -19,7 +20,7 @@
       <div class="header__text-box">
         <!-- Title of our webpage. It's good to be in h1 because of SEO -->
         <h1 class="heading-primary">Sandeep Amarnath</h1>
-        <h2 class="heading-secondary">
+        <h2 class="heading-primary-sub">
           Innovative front-end developer always striving to create beautiful and
           high performance websites
         </h2>
@@ -29,8 +30,107 @@
         </a>
       </div>
     </header>
+    <main>
+      <section class="section-about">
+        <div class="u-center-text">
+          <h2 class="heading-secondary u-margin-bottom-small">About Me</h2>
+        </div>
+        <div class="row">
+          <div class="profile">
+            <img
+              class="profile__photo"
+              src="images/profile-pic.png"
+              alt="profile-photo"
+            />
+          </div>
+        </div>
 
-    <section class="grid-test">
+        <div class="row">
+          <div class="col-1-of-2">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              I love to code
+              <ion-icon class="text-icon" name="heart"></ion-icon>
+            </h3>
+            <p class="paragraph">
+              Coding is more of my favourite hobby than a livelihood. I involve
+              myself exporing new technologies from various resources and put
+              most of my time getting better at skills I fall in love with. This
+              way, I have gained handful of knowledge and experience in
+              technologies mentioned to the right side of this section. Still I
+              believe my knowledge is incomplete and there will always be
+              something more to learn and I love to do that.
+            </p>
+
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              What can you expect from me
+              <ion-icon class="text-icon" name="help-outline"></ion-icon>
+            </h3>
+            <p class="paragraph">
+              I build responsive dynamic websites from scratch right from the
+              design phase. You can also get your own designs, and we can
+              discuss about the requirements and ins and outs of the expectation
+              after which I can start developing it. You can expect time to time
+              update from me so that you get to know the way I work and we can
+              tweak the design along the process whenever necessary. I can also
+              help you setup the domain names and deploy into cost-saving cloud
+              platforms where you can proudly announce your business to the
+              world with minimum possible investment. Contact me. More about me
+            </p>
+            <a href="#" class="btn-text">More about me &rarr;</a>
+          </div>
+
+          <div class="col-1-of-2">
+            <h3 class="heading-tertiary u-margin-bottom-small align-center">
+              My Skills
+            </h3>
+
+            <div class="skills-container">
+              <div class="skills-container__skill skills-container--ht">
+                <ion-icon
+                  class="skills__photo skills__photo--ht"
+                  name="logo-html5"
+                ></ion-icon>
+                <p class="skills-container--name">HTML</p>
+              </div>
+
+              <div class="skills-container__skill skills-container--cs">
+                <ion-icon
+                  class="skills__photo skills__photo--cs"
+                  name="logo-css3"
+                ></ion-icon>
+                <p class="skills-container--name">CSS</p>
+              </div>
+
+              <div class="skills-container__skill skills-container--js">
+                <ion-icon
+                  class="skills__photo skills__photo--js"
+                  name="logo-nodejs"
+                ></ion-icon>
+                <p class="skills-container--name">JavaScript</p>
+              </div>
+
+              <div class="skills-container__skill skills-container--rc">
+                <ion-icon
+                  class="skills__photo skills__photo--rc"
+                  name="logo-react"
+                ></ion-icon>
+                <p class="skills-container--name">React</p>
+              </div>
+
+              <div class="skills-container__skill skills-container--fb">
+                <ion-icon
+                  class="skills__photo skills__photo--fb"
+                  name="logo-firebase"
+                ></ion-icon>
+                <p class="skills-container--name">Firebase</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <section class="grid-test">
       <div class="row">
         <div class="col-1-of-2">col 1 of 2</div>
         <div class="col-1-of-2">col 1 of 2</div>
@@ -69,6 +169,6 @@
         <div class="col-1-of-4">col 1 of 4</div>
         <div class="col-3-of-4">col 3 of 4</div>
       </div>
-    </section>
+    </section> -->
   </body>
 </html>

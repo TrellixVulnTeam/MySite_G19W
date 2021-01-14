@@ -5,8 +5,8 @@
   // min-width: is the width it cannot not be smaller than the specified number. It introduces horizontal scroll;
   //   width: 295rem;
   max-width: $grid-width;
-  background-color: $color-grey;
-  color: $color-white;
+  // background-color: $color-grey;
+  // color: $color-white;
 
   margin: 0 auto;
   //   margin-bottom: $gutter-vertical; // we can include this here if we are not using  &:not(:last-child)
@@ -23,7 +23,7 @@
 
   // this means to say -> select all the elements having the class starting with col-.  If we write class* then select any classes that CONTAIN col-. $ means END with col-
   [class^="col-"] {
-    background-color: orangered;
+    // background-color: orangered;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }

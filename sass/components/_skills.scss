@@ -1,0 +1,83 @@
+.skills-container {
+  position: relative;
+  width: 100%;
+  height: 60rem;
+  margin-left: 4rem;
+  text-align: center;
+  background-color: rgb(32, 32, 34);
+  border-radius: 30%;
+  margin-top: 6rem;
+
+  &--name {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: black;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  &__skill {
+    position: absolute;
+    color: $color-grey-light-1;
+    padding: 3rem 3rem 2rem 3rem;
+    border-radius: 50%;
+  }
+
+  &--ht {
+    top: 4rem;
+    left: 4rem;
+    animation: animateHt 9s ease;
+  }
+  &--cs {
+    top: 4rem;
+    right: 4rem;
+    animation: animateCs 9s ease;
+  }
+
+  &--js {
+    top: 35rem;
+    left: 4rem;
+    animation: animateJs 9s ease;
+  }
+  &--fb {
+    top: 35rem;
+    right: 4rem;
+    animation: animateFb 9s ease;
+  }
+  &--rc {
+    top: 17rem;
+    left: 30%;
+    transition: all 7s;
+  }
+
+  .skills__photo {
+    font-size: 10rem;
+
+    &--ht {
+      color: $color-orange;
+    }
+
+    &--cs {
+      color: $color-blue;
+    }
+
+    &--fb {
+      color: #f7c52b;
+    }
+    &--js {
+      color: #efd81a;
+    }
+    &--rc {
+      font-size: 15rem;
+      color: #5fd3f3;
+      animation: animateRc 9s;
+    }
+  }
+}
+
+.text-icon {
+  color: $color-icon;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
