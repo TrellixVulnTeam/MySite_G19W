@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
+    /> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,900&family=Roboto:ital,wght@0,100;1,100;1,400&display=swap"
+      rel="stylesheet"
     />
+
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Sandeep Amarnath</title>
@@ -42,14 +49,15 @@
               src="images/profile-pic.png"
               alt="profile-photo"
             />
+            <figcaption class="profile__caption">Sandeep</figcaption>
           </div>
         </div>
 
         <div class="row">
           <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small">
+            <h3 class="heading-tertiary u-relative u-margin-bottom-small">
               I love to code
-              <ion-icon class="text-icon" name="heart"></ion-icon>
+              <ion-icon class="text-icon" name="heart-outline"></ion-icon>
             </h3>
             <p class="paragraph">
               Coding is more of my favourite hobby than a livelihood. I involve
@@ -61,9 +69,9 @@
               something more to learn and I love to do that.
             </p>
 
-            <h3 class="heading-tertiary u-margin-bottom-small">
+            <h3 class="heading-tertiary u-relative u-margin-bottom-small">
               What can you expect from me
-              <ion-icon class="text-icon" name="help-outline"></ion-icon>
+              <ion-icon class="text-icon" name="help-circle-outline"></ion-icon>
             </h3>
             <p class="paragraph">
               I build responsive dynamic websites from scratch right from the
@@ -77,10 +85,15 @@
               world with minimum possible investment. Contact me. More about me
             </p>
             <a href="#" class="btn-text">More about me &rarr;</a>
+            <a href="#" class="btn-text u-margin-left-huge"
+              >View My Resume <ion-icon name="document-outline"></ion-icon
+            ></a>
           </div>
 
           <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small align-center">
+            <h3
+              class="heading-tertiary u-margin-bottom-small u-margin-left-medium align-center"
+            >
               My Skills
             </h3>
 

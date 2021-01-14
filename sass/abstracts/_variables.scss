@@ -14,9 +14,18 @@ $color-grey-light-1: #f7f7f7;
 $color-orange: #ff673d;
 $color-blue: #2ebbf3;
 $color-icon: green;
+$color-about-section: rgba(231, 227, 233, 0.849);
 
 $default-font-size: 1.6rem;
 // GRID
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
+// animation
+
+$min-dist: 0rem;
+$small-dist: 4rem;
+$med-dist: 30rem;
+$med-dist-2: 37rem;
+$large-dist: 40rem;

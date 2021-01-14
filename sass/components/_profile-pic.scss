@@ -1,4 +1,5 @@
 .profile {
+  position: relative;
   width: 24rem;
   height: 24rem;
   margin: 2rem auto;
@@ -9,5 +10,34 @@
     transform: translate(0rem, -2rem);
     width: 24rem;
     height: 30rem;
+  }
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $color-white;
+    transform: translate(
+      -50%,
+      -50%
+    ); // this is for adjusting center of the text to center of container which is shape (this u have seen in header text)
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    opacity: 0;
+    transition: all 0.5s;
+    transform: translate(-50%, 40%);
+
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__photo {
+    filter: blur(0.5rem) brightness(80%);
   }
 }

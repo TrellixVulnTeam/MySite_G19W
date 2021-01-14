@@ -68,85 +68,85 @@
 
 @keyframes animateHt {
   0% {
-    transform: translate(0, 4rem);
+    transform: translate($min-dist, $min-dist);
   }
 
   25% {
-    transform: translate(0, 30rem);
+    transform: translate($min-dist, $med-dist-2);
   }
 
   50% {
-    transform: translate(30rem, 30rem);
+    transform: translate($med-dist, $med-dist-2);
   }
 
   75% {
-    transform: translate(30rem, -0.2rem);
+    transform: translate($med-dist, $min-dist);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate($min-dist, $min-dist);
   }
 }
 
 @keyframes animateCs {
   0% {
-    transform: translate(-4rem, 0);
+    transform: translate($min-dist, $min-dist);
   }
 
   25% {
-    transform: translate(-30rem, 0);
+    transform: translate(-$med-dist, $min-dist);
   }
 
   50% {
-    transform: translate(-30rem, 30rem);
+    transform: translate(-$med-dist, $med-dist-2);
   }
 
   75% {
-    transform: translate(0rem, 30rem);
+    transform: translate($min-dist, $med-dist-2);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate($min-dist, $min-dist);
   }
 }
 
 @keyframes animateJs {
   0% {
-    transform: translate(4rem, 0);
+    transform: translate($min-dist, $min-dist);
   }
 
   25% {
-    transform: translate(30rem, 0);
+    transform: translate($med-dist, $min-dist);
   }
 
   50% {
-    transform: translate(30rem, -30rem);
+    transform: translate($med-dist, -$med-dist-2);
   }
 
   75% {
-    transform: translate(0, -30rem);
+    transform: translate(-$min-dist, -$med-dist-2);
   }
   100% {
-    transform: translate(0);
+    transform: translate($min-dist, $min-dist);
   }
 }
 
 @keyframes animateFb {
   0% {
-    transform: translate(0, -4rem);
+    transform: translate($min-dist, $min-dist);
   }
 
   25% {
-    transform: translate(0rem, -30rem);
+    transform: translate($min-dist, -$med-dist-2);
   }
 
   50% {
-    transform: translate(-30rem, -30rem);
+    transform: translate(-$med-dist, -$med-dist-2);
   }
 
   75% {
-    transform: translate(-30rem, 0rem);
+    transform: translate(-$med-dist, $min-dist);
   }
   100% {
-    transform: translate(0);
+    transform: translate($min-dist, $min-dist);
   }
 }
 

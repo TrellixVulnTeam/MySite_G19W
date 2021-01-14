@@ -1,19 +1,19 @@
 .skills-container {
   position: relative;
   width: 100%;
-  height: 60rem;
+  height: 67rem;
   margin-left: 4rem;
   text-align: center;
-  background-color: rgb(32, 32, 34);
+  // background-color: rgb(32, 32, 34);
+  background-color: rgb(33, 41, 41);
   border-radius: 30%;
-  margin-top: 6rem;
+  margin-top: 2rem;
 
   &--name {
     font-size: 1.6rem;
     text-align: center;
     margin-top: 1rem;
     font-weight: 500;
-    color: black;
     color: #fff;
     text-transform: uppercase;
   }
@@ -25,30 +25,35 @@
   }
 
   &--ht {
-    top: 4rem;
-    left: 4rem;
-    animation: animateHt 9s ease;
+    top: $small-dist;
+    left: $small-dist;
+    animation: animateHt 40s linear infinite;
+    backface-visibility: hidden;
   }
   &--cs {
-    top: 4rem;
-    right: 4rem;
-    animation: animateCs 9s ease;
+    top: $small-dist;
+    right: $small-dist;
+    animation: animateCs 40s linear infinite;
+    backface-visibility: hidden;
   }
 
   &--js {
-    top: 35rem;
-    left: 4rem;
-    animation: animateJs 9s ease;
+    top: $large-dist;
+    left: $small-dist;
+    animation: animateJs 40s linear infinite;
+    backface-visibility: hidden;
   }
   &--fb {
-    top: 35rem;
-    right: 4rem;
-    animation: animateFb 9s ease;
+    top: $large-dist;
+    right: $small-dist;
+    animation: animateFb 40s linear infinite;
+    backface-visibility: hidden;
   }
   &--rc {
-    top: 17rem;
+    top: 20rem;
     left: 30%;
     transition: all 7s;
+    backface-visibility: hidden;
   }
 
   .skills__photo {
@@ -66,18 +71,12 @@
       color: #f7c52b;
     }
     &--js {
-      color: #efd81a;
+      color: #52f2f7;
     }
     &--rc {
       font-size: 15rem;
       color: #5fd3f3;
-      animation: animateRc 9s;
+      animation: animateRc 40s infinite;
     }
   }
-}
-
-.text-icon {
-  color: $color-icon;
-  font-size: 2rem;
-  margin-left: 1rem;
 }
