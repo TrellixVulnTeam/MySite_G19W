@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 0.2rem; }
+  padding: 2.2rem; }
 
 .u-center-text {
   text-align: center; }
@@ -42,8 +42,8 @@ body {
   position: relative; }
 
 .heading-primary {
-  letter-spacing: 5px;
-  font-size: 5rem;
+  letter-spacing: 1rem;
+  font-size: 6rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 4rem;
@@ -51,19 +51,18 @@ body {
   backface-visibility: hidden; }
 
 .heading-primary-sub {
-  letter-spacing: 0.15rem;
-  font-size: 1.8rem;
-  max-width: 40rem;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
   margin: auto;
-  margin-bottom: 5rem;
-  line-height: 4rem;
+  margin-bottom: 10rem;
+  line-height: 5rem;
   animation: moveFromRight 2s ease; }
 
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #099e16, #712da8);
+  background-image: linear-gradient(to right, #6fd5d5, #2888b4);
   display: inline-block; }
 
 .heading-secondary {
@@ -71,7 +70,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   font-weight: 700;
-  background-image: linear-gradient(to right, #099e16, #712da8);
+  background-image: linear-gradient(to right, #6fd5d5, #2888b4);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
@@ -199,8 +198,9 @@ body {
 .header {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to right bottom, #712da8, rgba(9, 158, 22, 0.6)), url(../images/header_bg_2.jpg);
+  background-image: linear-gradient(to right bottom, rgba(111, 213, 213, 0.8), rgba(40, 136, 180, 0.8)), url(/images/side_bg.jpg);
   background-size: cover;
+  /* fits completely*/
   background-position: top; }
   .header__text-box {
     position: absolute;
@@ -212,8 +212,8 @@ body {
     padding: 5rem; }
   .header__logo-box {
     position: absolute;
-    top: 4rem;
-    left: 4rem;
+    top: 2rem;
+    left: 2rem;
     margin: 5rem;
     animation: moveFromTop 2s ease; }
   .header__logo {
@@ -237,13 +237,15 @@ body {
     transform: translateY(0.2rem); }
   .btn--orange:link, .btn--orange:visited {
     background-color: #ec7717;
+    background-color: white;
     box-shadow: 0 0.5rem 0.4rem #000, 0.4;
-    color: whitesmoke;
+    color: gray;
     font-weight: 700;
     letter-spacing: 0.1rem;
     animation: moveFromBottom 2s ease; }
     .btn--orange:link:hover, .btn--orange:visited:hover {
-      background-color: #e7822e;
+      background-color: #c7d322;
+      color: white;
       font-weight: bold; }
     .btn--orange:link::after, .btn--orange:visited::after {
       display: inline-block;
@@ -257,15 +259,15 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #284929;
+  color: #55c5a9;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 0.1rem solid #284929;
+  border-bottom: 0.1rem solid #55c5a9;
   padding: 0.3rem;
   transition: all 0.7s; }
 
 .btn-text:hover {
-  background-color: #284929;
+  background-color: #55c5a9;
   color: #ffffff;
   box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-0.2rem); }
@@ -374,14 +376,49 @@ body {
   font-size: 3rem;
   margin-left: 1rem; }
 
+.card {
+  -moz-perspective: 150rem;
+  perspective: 150rem; }
+  .card__side {
+    background-color: orangered;
+    height: 50rem;
+    transition: all 0.8s ease;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    width: 100%; }
+    .card__side--front {
+      background-color: #c5bbb7; }
+    .card__side--back {
+      transform: rotateY(-180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #6fd5d5, #2888b4); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 13rem;
+    background-blend-mode: screen; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #6fd5d5, #2888b4), url(../../images/cow-bull.png); }
+
 .section-about {
-  background-color: #f7f7f7;
   padding: 6rem 0;
-  background-color: rgba(231, 227, 233, 0.849); }
+  background-color: #f7f7f7; }
+
+.section-projects {
+  padding: 6rem 0; }
 
 .heading-primary {
-  letter-spacing: 5px;
-  font-size: 5rem;
+  letter-spacing: 1rem;
+  font-size: 6rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 4rem;
@@ -389,19 +426,18 @@ body {
   backface-visibility: hidden; }
 
 .heading-primary-sub {
-  letter-spacing: 0.15rem;
-  font-size: 1.8rem;
-  max-width: 40rem;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
   margin: auto;
-  margin-bottom: 5rem;
-  line-height: 4rem;
+  margin-bottom: 10rem;
+  line-height: 5rem;
   animation: moveFromRight 2s ease; }
 
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #099e16, #712da8);
+  background-image: linear-gradient(to right, #6fd5d5, #2888b4);
   display: inline-block; }
 
 .heading-secondary {
@@ -409,7 +445,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   font-weight: 700;
-  background-image: linear-gradient(to right, #099e16, #712da8);
+  background-image: linear-gradient(to right, #6fd5d5, #2888b4);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;

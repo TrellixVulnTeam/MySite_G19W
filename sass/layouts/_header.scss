@@ -4,12 +4,23 @@
 
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-dark, 1),
-      rgba($color-primary-light, 0.6)
+      rgba($color-primary-light, 0.8),
+      /* note that the hex color inside rgba works only for sass/scss and not for normal css*/
+        rgba($color-primary-dark, 0.8)
     ),
-    url(../images/header_bg_2.jpg);
-  background-size: cover;
+    url(/images/side_bg.jpg);
+
+  background-size: cover; /* fits completely*/
   background-position: top;
+
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($color-primary-light, 1),
+  //     rgba($color-primary-dark, 0.6)
+  //   ),
+  //   url(../images/header_bg_2.jpg);
+  // background-size: cover;
+  // background-position: top;
 
   &__text-box {
     position: absolute;
@@ -22,8 +33,8 @@
   }
   &__logo-box {
     position: absolute;
-    top: 4rem;
-    left: 4rem;
+    top: 2rem;
+    left: 2rem;
     margin: 5rem;
     animation: moveFromTop 2s ease;
   }
