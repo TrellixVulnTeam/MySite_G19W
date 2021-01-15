@@ -31,7 +31,7 @@
           Innovative front-end developer always striving to create beautiful and
           high performance websites
         </h2>
-        <a href="#" class="btn btn--orange"
+        <a href="#" class="btn btn--white btn--white--arrow u-medium-padding"
           >View My Profile
           <!-- <span class="btn-arrow">&rarr;</span> -->
         </a>
@@ -152,20 +152,58 @@
           <div class="col-1-of-3">
             <div class="card">
               <div class="card__side card__side--front">
-                <div class="card__picture card__picture--1">
-                  <!-- we are using background-image in css for this and not html's img because we can do some cool effects with css one. Let's add some space alone here -->
-                  &nbsp;
+                <div class="card__picture card__picture--1"></div>
+                <div class="card__heading">
+                  <span class="card__heading-span card__heading-span-1"
+                    >Match me if you can</span
+                  >
                 </div>
-                <div class="card__heading">Heading</div>
-                <div class="card__details">Details</div>
+                <div class="card__details">
+                  <ul>
+                    <li style="font-weight: bold">Technologies Used</li>
+                    <li>React + Hooks</li>
+                    <li>Compound Components</li>
+                    <li>Node package for dictionary</li>
+                    <li>No authentication</li>
+                  </ul>
+                </div>
               </div>
               <div class="card__side card__side--back card__side--back-1">
-                BACK
+                <!-- call to action -->
+                <div class="card__cta">
+                  <div class="card__cta__desc">
+                    This is a word and number match game. You will have to guess
+                    3/4/5/6 lettered hidden word/number in a specified number of
+                    attempts.
+                  </div>
+
+                  <div class="card__cta__btn-container">
+                    <a
+                      href="#"
+                      class="btn btn--white u-small-padding btn--white--card"
+                    >
+                      Try Now<ion-icon
+                        class="card__cta__icon card__cta__icon--rotate"
+                        name="arrow-up-outline"
+                      ></ion-icon>
+                    </a>
+
+                    <a
+                      href="#"
+                      class="btn btn--white u-small-padding btn--white--card"
+                    >
+                      Source<ion-icon
+                        class="card__cta__icon"
+                        name="logo-github"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-1-of-3">col 1 of 3</div>
-          <div class="col-1-of-3">col 1 of 3</div>
+          <!-- <div class="col-1-of-3">col 1 of 3</div>
+          <div class="col-1-of-3">col 1 of 3</div> -->
         </div>
       </section>
     </main>

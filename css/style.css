@@ -41,6 +41,15 @@ body {
 .u-relative {
   position: relative; }
 
+.u-medium-padding {
+  padding: 2rem 4rem; }
+
+.u-small-padding {
+  padding: 0.5rem 5rem; }
+
+.u-btn-width {
+  width: 17rem; }
+
 .heading-primary {
   letter-spacing: 1rem;
   font-size: 6rem;
@@ -220,11 +229,15 @@ body {
     height: 7rem; }
 
 .btn {
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
+  .btn--white--card {
+    width: 17rem; }
+    .btn--white--card:last-child {
+      margin-top: 1.3rem; }
   .btn:link, .btn:visited {
     margin-bottom: 2rem;
     text-decoration: none;
-    padding: 2rem 4rem;
     border-radius: 10rem;
     transform: translateY(0px);
     font-size: 1.5rem;
@@ -235,7 +248,7 @@ body {
     box-shadow: 0 0.5rem 1rem #000, 0.4;
     margin-bottom: 2rem;
     transform: translateY(0.2rem); }
-  .btn--orange:link, .btn--orange:visited {
+  .btn--white:link, .btn--white:visited {
     background-color: #ec7717;
     background-color: white;
     box-shadow: 0 0.5rem 0.4rem #000, 0.4;
@@ -243,19 +256,19 @@ body {
     font-weight: 700;
     letter-spacing: 0.1rem;
     animation: moveFromBottom 2s ease; }
-    .btn--orange:link:hover, .btn--orange:visited:hover {
+    .btn--white:link:hover, .btn--white:visited:hover {
       background-color: #c7d322;
       color: white;
       font-weight: bold; }
-    .btn--orange:link::after, .btn--orange:visited::after {
-      display: inline-block;
-      content: "\2192";
-      width: 2rem;
-      padding: 0 0.2rem;
-      font-size: 1.2rem; }
-    .btn--orange:link:hover::after, .btn--orange:visited:hover::after {
-      content: "\2193";
-      width: 2rem; }
+  .btn--white--arrow:link::after, .btn--white--arrow:visited::after {
+    display: inline-block;
+    content: "\2192";
+    width: 2rem;
+    padding: 0 0.2rem;
+    font-size: 1.2rem; }
+  .btn--white--arrow:link:hover::after, .btn--white--arrow:visited:hover::after {
+    content: "\2193";
+    width: 2rem; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
@@ -263,7 +276,6 @@ body {
   display: inline-block;
   text-decoration: none;
   border-bottom: 0.1rem solid #55c5a9;
-  padding: 0.3rem;
   transition: all 0.7s; }
 
 .btn-text:hover {
@@ -378,9 +390,10 @@ body {
 
 .card {
   -moz-perspective: 150rem;
-  perspective: 150rem; }
+  perspective: 150rem;
+  position: relative;
+  border-radius: 3px; }
   .card__side {
-    background-color: orangered;
     height: 50rem;
     transition: all 0.8s ease;
     color: #fff;
@@ -392,8 +405,6 @@ body {
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     width: 100%; }
-    .card__side--front {
-      background-color: #c5bbb7; }
     .card__side--back {
       transform: rotateY(-180deg); }
       .card__side--back-1 {
@@ -404,10 +415,53 @@ body {
     transform: rotateY(0); }
   .card__picture {
     background-size: cover;
-    height: 13rem;
-    background-blend-mode: screen; }
-    .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #6fd5d5, #2888b4), url(../../images/cow-bull.png); }
+    height: 20rem;
+    background-image: linear-gradient(to right bottom, rgba(40, 136, 180, 0.8), rgba(111, 213, 213, 0.8)), url(/images/word-game.jpg);
+    background-blend-mode: saturation; }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    top: 12rem;
+    right: 3rem;
+    text-align: right;
+    width: 55%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span-1 {
+      background-image: linear-gradient(to right bottom, #6fd5d5, #2888b4); }
+  .card__details {
+    color: black;
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 1.1rem auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 0.1rem solid #fff; }
+  .card__cta {
+    position: absolute;
+    padding: 12%;
+    line-height: 4rem; }
+    .card__cta__desc {
+      letter-spacing: 1px; }
+    .card__cta__btn-container {
+      margin: 4rem; }
+  .card__cta__icon {
+    position: absolute;
+    font-size: 2rem;
+    top: 1.6rem;
+    left: 2rem; }
+    .card__cta__icon--rotate {
+      transform: rotate(45deg); }
 
 .section-about {
   padding: 6rem 0;
