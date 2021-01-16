@@ -231,6 +231,8 @@ body {
 .btn {
   display: inline-block;
   position: relative; }
+  .btn--animate {
+    animation: moveFromBottom 2s ease; }
   .btn--white--card {
     width: 17rem; }
     .btn--white--card:last-child {
@@ -249,15 +251,14 @@ body {
     margin-bottom: 2rem;
     transform: translateY(0.2rem); }
   .btn--white:link, .btn--white:visited {
-    background-color: #ec7717;
-    background-color: white;
+    background-color: #305a6d;
+    background-color: #ffffff;
     box-shadow: 0 0.5rem 0.4rem #000, 0.4;
     color: gray;
     font-weight: 700;
-    letter-spacing: 0.1rem;
-    animation: moveFromBottom 2s ease; }
+    letter-spacing: 0.1rem; }
     .btn--white:link:hover, .btn--white:visited:hover {
-      background-color: #c7d322;
+      background-color: #305a6d;
       color: white;
       font-weight: bold; }
   .btn--white--arrow:link::after, .btn--white--arrow:visited::after {
@@ -302,7 +303,7 @@ body {
     text-align: center;
     margin-top: 1rem;
     font-weight: 500;
-    color: #fff;
+    color: #ffffff;
     text-transform: uppercase; }
   .skills-container__skill {
     position: absolute;
@@ -392,11 +393,12 @@ body {
   -moz-perspective: 150rem;
   perspective: 150rem;
   position: relative;
-  border-radius: 3px; }
+  border-radius: 3px;
+  height: 50rem; }
   .card__side {
     height: 50rem;
     transition: all 0.8s ease;
-    color: #fff;
+    color: #ffffff;
     font-size: 2rem;
     position: absolute;
     top: 0;
@@ -405,10 +407,22 @@ body {
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     width: 100%; }
+    .card__side--front {
+      background-color: white; }
     .card__side--back {
       transform: rotateY(-180deg); }
       .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #c26cb7, #9c2292); }
+      .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #6fd5d5, #2888b4); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #d9e068, #b89413); }
+      .card__side--back-4 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-5 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-6 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
@@ -416,8 +430,19 @@ body {
   .card__picture {
     background-size: cover;
     height: 20rem;
-    background-image: linear-gradient(to right bottom, rgba(40, 136, 180, 0.8), rgba(111, 213, 213, 0.8)), url(/images/word-game.jpg);
     background-blend-mode: saturation; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, rgba(156, 34, 146, 0.8), rgba(194, 108, 183, 0.8)), url(/images/netflix-img.jpeg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, rgba(40, 136, 180, 0.8), rgba(111, 213, 213, 0.8)), url(/images/word-game.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, rgba(184, 148, 19, 0.8), rgba(217, 224, 104, 0.8)), url(/images/burger.jpg); }
+    .card__picture--4 {
+      background-image: linear-gradient(to right bottom, rgba(255, 119, 48, 0.8), rgba(255, 185, 0, 0.8)), url(/images/memory.jpg); }
+    .card__picture--5 {
+      background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.8), rgba(126, 213, 111, 0.8)), url(/images/nature.jpg); }
+    .card__picture--6 {
+      background-image: linear-gradient(to right bottom, rgba(86, 67, 250, 0.8), rgba(41, 152, 255, 0.8)), url(/images/chat.png); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -433,7 +458,17 @@ body {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span-1 {
+      background-image: linear-gradient(to right bottom, #c26cb7, #9c2292); }
+    .card__heading-span-2 {
       background-image: linear-gradient(to right bottom, #6fd5d5, #2888b4); }
+    .card__heading-span-3 {
+      background-image: linear-gradient(to right bottom, #d9e068, #b89413); }
+    .card__heading-span-4 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+    .card__heading-span-5 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+    .card__heading-span-6 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card__details {
     color: black;
     padding: 3rem; }
@@ -446,7 +481,7 @@ body {
         font-size: 1.5rem;
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
-          border-bottom: 0.1rem solid #fff; }
+          border-bottom: 0.1rem solid #ffffff; }
   .card__cta {
     position: absolute;
     padding: 12%;

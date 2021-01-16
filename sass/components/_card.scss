@@ -3,13 +3,14 @@
   perspective: 150rem;
   position: relative;
   border-radius: 3px;
+  height: $card-height;
   //   display: none;
   &__side {
-    height: 50rem;
+    height: $card-height;
     transition: all 0.8s ease;
-    color: #fff;
+    color: $color-white;
     font-size: 2rem;
-    position: absolute; // this makes the parent (card) lose its height and the perspective on it no longer works. We can not apply clear-fix because it's not float problem. so the fix is we need to specify the same height to the parent as this sides
+    position: absolute;
     top: 0;
     left: 0;
     backface-visibility: hidden;
@@ -18,6 +19,7 @@
     width: 100%;
 
     &--front {
+      background-color: white;
     }
 
     &--back {
@@ -26,8 +28,48 @@
       &-1 {
         background-image: linear-gradient(
           to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
           $color-primary-light,
           $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-burger-light,
+          $color-burger-dark
+        );
+      }
+
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-memory-light,
+          $color-memory-dark
+        );
+      }
+
+      &-5 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-nature-light,
+          $color-nature-dark
+        );
+      }
+
+      &-6 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-extreme-light,
+          $color-extreme-dark
         );
       }
     }
@@ -45,15 +87,66 @@
   &__picture {
     background-size: cover;
     height: 20rem;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-dark, 0.8),
-        /* note that the hex color inside rgba works only for sass/scss and not for normal css*/
-          rgba($color-primary-light, 0.8)
-      ),
-      url(/images/word-game.jpg);
-
     background-blend-mode: saturation;
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-dark, 0.8),
+          /* note that the hex color inside rgba works only for sass/scss and not for normal css*/
+            rgba($color-tertiary-light, 0.8)
+        ),
+        url(/images/netflix-img.jpeg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-dark, 0.8),
+          /* note that the hex color inside rgba works only for sass/scss and not for normal css*/
+            rgba($color-primary-light, 0.8)
+        ),
+        url(/images/word-game.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-burger-dark, 0.8),
+          /* note that the hex color inside rgba works only for sass/scss and not for normal css*/
+            rgba($color-burger-light, 0.8)
+        ),
+        url(/images/burger.jpg);
+    }
+
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-memory-dark, 0.8),
+          /* note that the hex color inside rgba works only for sass/scss and not for normal css*/
+            rgba($color-memory-light, 0.8)
+        ),
+        url(/images/memory.jpg);
+    }
+
+    &--5 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-nature-dark, 0.8),
+          /* note that the hex color inside rgba works only for sass/scss and not for normal css*/
+            rgba($color-nature-light, 0.8)
+        ),
+        url(/images/nature.jpg);
+    }
+
+    &--6 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-extreme-dark, 0.8),
+          /* note that the hex color inside rgba works only for sass/scss and not for normal css*/
+            rgba($color-extreme-light, 0.8)
+        ),
+        url(/images/chat.png);
+    }
   }
 
   &__heading {
@@ -61,7 +154,6 @@
     font-weight: 300;
     text-transform: uppercase;
     color: $color-white;
-    // since it should be on the bottom right of the image, lets make it absolute
     position: absolute;
     top: 12rem;
     right: 3rem;
@@ -73,11 +165,52 @@
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+
     &-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 1),
+        rgba($color-tertiary-dark, 1)
+      );
+    }
+
+    &-2 {
       background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 1),
         rgba($color-primary-dark, 1)
+      );
+    }
+
+    &-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-burger-light, 1),
+        rgba($color-burger-dark, 1)
+      );
+    }
+
+    &-4 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-memory-light, 1),
+        rgba($color-memory-dark, 1)
+      );
+    }
+
+    &-5 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-nature-light, 1),
+        rgba($color-nature-dark, 1)
+      );
+    }
+
+    &-6 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-extreme-light, 1),
+        rgba($color-extreme-dark, 1)
       );
     }
   }
@@ -94,7 +227,7 @@
         font-size: 1.5rem;
         padding: 1rem;
         &:not(:last-child) {
-          border-bottom: 0.1rem solid #fff;
+          border-bottom: 0.1rem solid $color-white;
         }
       }
     }

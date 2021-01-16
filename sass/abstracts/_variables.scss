@@ -1,24 +1,32 @@
 $color-white: #ffffff;
 $color-black: #000;
 
-$color-primary-dark: #712da8;
-$color-primary: #284929;
-$color-primary-light: #099e16;
-
-$color-primary-dark: #2d44a8;
-$color-primary: #284929;
-$color-primary-light: #9e0960;
-
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-
 $color-primary: #55c5a9;
 $color-primary-light: #6fd5d5;
 $color-primary-dark: #2888b4;
 
-$color-secondary: #ec7717;
-$color-secondary-light: #e7822e;
+$color-secondary-dark: rgb(33, 41, 41);
+$color-secondary: #305a6d;
+$color-secondary-light: #60c7e0;
+
+$color-tertiary-light: #ffb900;
+$color-tertiary-dark: #ff7730;
+
+$color-tertiary-light: #c26cb7;
+$color-tertiary-dark: #9c2292;
+
+$color-burger-light: #d9e068;
+$color-burger-dark: #b89413;
+
+$color-memory-light: #ffb900;
+$color-memory-dark: #ff7730;
+
+$color-extreme-light: #2998ff;
+$color-extreme-dark: #5643fa;
+
+$color-nature-light: #7ed56f;
+$color-nature-dark: #28b485;
+
 $color-grey: #777;
 $color-grey-light-1: #f7f7f7;
 
@@ -40,3 +48,7 @@ $small-dist: 4rem;
 $med-dist: 30rem;
 $med-dist-2: 37rem;
 $large-dist: 40rem;
+
+//card
+
+$card-height: 50rem;

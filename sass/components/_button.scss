@@ -1,6 +1,10 @@
 .btn {
   display: inline-block;
   position: relative;
+
+  &--animate {
+    animation: moveFromBottom 2s ease;
+  }
   &--white--card {
     width: 17rem;
 
@@ -31,36 +35,22 @@
   &--white:link,
   &--white:visited {
     background-color: $color-secondary;
-    background-color: white;
+    background-color: $color-white;
     box-shadow: 0 0.5rem 0.4rem ($color-black, 0.4);
     // color: whitesmoke;
     color: gray;
     font-weight: 700;
     letter-spacing: 0.1rem;
-    animation: moveFromBottom 2s ease;
 
     &:active {
       //   transform: translateY(1rem);
     }
 
     &:hover {
-      background-color: rgb(199, 211, 34);
+      background-color: $color-secondary;
       color: white;
       font-weight: bold;
     }
-
-    // &::after {
-    //   display: inline-block;
-    //   content: "\2192";
-    //   width: 2rem;
-    //   padding: 0 0.2rem;
-    //   font-size: 1.2rem;
-    // }
-
-    // &:hover::after {
-    //   content: "\2193";
-    //   width: 2rem;
-    // }
   }
 
   &--white--arrow:link,
@@ -85,7 +75,7 @@
   &:visited {
     font-size: $default-font-size;
     color: $color-primary;
-    display: inline-block; // a tag is block by default
+    display: inline-block;
     text-decoration: none;
     border-bottom: 0.1rem solid $color-primary;
     transition: all 0.7s;
@@ -104,10 +94,3 @@
     transform: translateY(0rem);
   }
 }
-
-// .btn--white--card {
-//   width: 17rem;
-//   :not(:last-child) {
-//     margin-bottom: 2rem;
-//   }
-// }
