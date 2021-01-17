@@ -12,6 +12,7 @@
       margin-top: 1.3rem;
     }
   }
+  &,
   &:link,
   &:visited {
     margin-bottom: 2rem;
@@ -21,12 +22,17 @@
     transform: translateY(0px);
     font-size: 1.5rem;
     transition: all 0.4s;
+    // changes for <button> element
+    border: none;
+    cursor: pointer;
   }
   &:hover {
     transform: translateY(-0.3rem);
   }
 
-  &:active {
+  // focus is for <button> element and not for anchor tag
+  &:active,
+  &:focus {
     box-shadow: 0 0.5rem 1rem ($color-black, 0.4);
     margin-bottom: 2rem;
     transform: translateY(0.2rem);

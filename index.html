@@ -478,8 +478,106 @@
           </div>
         </div>
       </section>
-    </main>
+      <section class="section-contact">
+        <div class="contact-background">
+          <div class="u-center-text">
+            <h2 class="heading-secondary u-margin-bottom-big">Contact Me</h2>
+          </div>
+          <div class="row">
+            <div class="col-1-of-2">
+              <h3 class="heading-tertiary u-relative u-margin-bottom-small">
+                Leave me a message and I'll get back to you asap
+              </h3>
+              <form action="" class="contact-form">
+                <div class="contact-form__group">
+                  <input
+                    type="text"
+                    class="contact-form__input"
+                    placeholder="Full Name"
+                    required
+                    id="name"
+                  />
+                  <label for="name" class="contact-form__label"
+                    >Full Name</label
+                  >
+                </div>
+                <div class="contact-form__group">
+                  <input
+                    type="email"
+                    class="contact-form__input"
+                    placeholder="Email"
+                    required
+                    id="email"
+                  />
+                  <label for="email" class="contact-form__label">Email</label>
+                </div>
+                <div class="contact-form__group">
+                  <textarea
+                    class="contact-form__text"
+                    name=""
+                    placeholder="Feel free to share your thoughts"
+                    id="desc"
+                    cols="20"
+                    rows="10"
+                    required
+                  ></textarea>
+                  <label for="desc" class="contact-form__label"
+                    >Feel free to share your thoughts</label
+                  >
+                </div>
 
+                <div class="contact-form__group">
+                  <!-- Note that we need a real button inside the form and not the anchor link as we used before -->
+                  <!-- we need button coz that will allow to submit the form -->
+                  <!-- button will be to submit by default -->
+                  <!-- To use the a element styles, we need to make some changes in styles of btn -->
+                  <button class="btn btn--white contact-form__btn">
+                    Send
+                    <ion-icon
+                      class="card__cta__icon contact-form__btn__icon"
+                      name="send-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-1-of-2">
+              <div class="contact-box">
+                <h3
+                  class="heading-tertiary u-relative u-margin-bottom-medium u-margin-left-medium"
+                >
+                  Call / email me @
+                </h3>
+                <div class="contact-box__paragraph">
+                  <p>
+                    <ion-icon
+                      class="contact-box__paragraph__icon"
+                      name="call-outline"
+                    ></ion-icon
+                    >+1(902)-802-8894
+                  </p>
+                </div>
+                <div class="contact-box__paragraph">
+                  <p>
+                    <ion-icon
+                      class="contact-box__paragraph__icon"
+                      name="mail-outline"
+                    ></ion-icon
+                    >sandeepamaranath@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <div class="contact__form-container">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+      consequatur ratione ipsam dicta animi debitis repellat veritatis
+      cupiditate numquam iusto, tempore aperiam alias, dolores reiciendis
+      quis ut impedit, possimus error?
+    </div> -->
     <!-- <section class="grid-test">
       <div class="row">
         <div class="col-1-of-2">col 1 of 2</div>
