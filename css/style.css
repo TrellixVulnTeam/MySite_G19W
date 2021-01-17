@@ -229,7 +229,7 @@ body {
     margin: 5rem;
     animation: moveFromTop 2s ease; }
   .header__logo {
-    height: 7rem; }
+    height: 10rem; }
 
 .btn {
   display: inline-block;
@@ -532,9 +532,10 @@ body {
   .contact-form__input:focus, .contact-form__text:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-bottom: 0.3rem solid #2998ff; }
+    border-bottom: 0.3rem solid #55c5a9; }
   .contact-form__input:focus:invalid, .contact-form__text:focus:invalid {
-    border-bottom: 0.3rem solid #212929; }
+    border-bottom: 0.3rem solid #212929;
+    border-bottom: 0.3rem solid orangered; }
   .contact-form__label {
     font-size: 1.2rem;
     font-weight: bold;
@@ -596,8 +597,7 @@ body {
   padding: 6rem 0; }
 
 .section-contact {
-  background-color: #f7f7f7;
-  padding: 6rem 0; }
+  background-color: #f7f7f7; }
 
 .heading-primary {
   letter-spacing: 1rem;
@@ -677,4 +677,58 @@ body {
 
 .contact-background {
   background-image: linear-gradient(156deg, #f7f7f7 20%, rgba(111, 213, 213, 0.4) 60%, rgba(40, 136, 180, 0.4) 80%);
-  width: 100%; }
+  width: 100%;
+  padding-top: 6rem; }
+
+.footer {
+  background-color: #333;
+  clip-path: polygon(50% 30%, 100% 0, 100% 100%, 0 100%, 0 0);
+  padding: 5rem 0 0 0;
+  margin-top: -12rem;
+  color: #f7f7f7;
+  z-index: 10; }
+  .footer__container {
+    position: relative; }
+  .footer__navigation {
+    margin: auto;
+    margin-bottom: 8rem;
+    width: 80%;
+    display: block;
+    padding-left: 10rem;
+    padding-top: 8rem; }
+  .footer__list {
+    list-style: none;
+    margin: auto; }
+  .footer__item {
+    font-size: 1.6rem;
+    display: inline-block;
+    text-align: center; }
+    .footer__item:not(:last-child) {
+      margin-right: 6rem; }
+  .footer__link:visited, .footer__link:link {
+    color: #f7f7f7;
+    background-color: #333;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    letter-spacing: 1px; }
+  .footer__link:hover, .footer__link:active {
+    color: #55c5a9;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3); }
+  .footer__icon {
+    margin: -0.4rem 0.5rem 0 0;
+    vertical-align: middle; }
+  .footer__copyright {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 0.7px; }
+  .footer__arrow {
+    margin: auto;
+    text-align: center; }
+    .footer__arrow__icon {
+      margin-top: -2rem;
+      font-size: 5rem;
+      color: #2888b4;
+      cursor: pointer; }

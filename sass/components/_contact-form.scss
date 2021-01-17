@@ -43,11 +43,14 @@
   &__text:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
-    border-bottom: 0.3rem solid $color-extreme-light;
+    border-bottom: 0.3rem solid $color-primary;
+    // border-bottom: 0.3rem solid greenyellow;
+    // border-bottom: 0.3rem solid red
   }
   &__input:focus:invalid,
   &__text:focus:invalid {
     border-bottom: 0.3rem solid $color-secondary-dark;
+    border-bottom: 0.3rem solid orangered;
   }
 
   &__label {
