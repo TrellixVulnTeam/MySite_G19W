@@ -10,6 +10,11 @@
     transform: translate(0rem, -2rem);
     width: 24rem;
     height: 30rem;
+    @include respond(tab-land) {
+      transform: translate(0rem, 0rem);
+      width: 24rem;
+      height: 25rem;
+    }
   }
   &__caption {
     position: absolute;

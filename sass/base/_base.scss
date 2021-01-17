@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 *,
 *::after,
@@ -12,6 +13,7 @@ html {
   /* root font-size */
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,4 +22,9 @@ body {
   line-height: 1.7;
   color: $color-grey;
   padding: 2.2rem;
+
+  // media-query
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

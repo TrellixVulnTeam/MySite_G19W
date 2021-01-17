@@ -19,6 +19,10 @@
   //   this means, everything except the last child
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    // row gutter reduced for small devices
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   // this means to say -> select all the elements having the class starting with col-.  If we write class* then select any classes that CONTAIN col-. $ means END with col-
@@ -26,8 +30,24 @@
     // background-color: orangered;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(tab-land) {
+        margin-right: $gutter-horizontal-small;
+      }
+
+      // down below, we are converting column to have 100% width, so one column is treated as a row and we dont need any gutter in this case since we dont have elements next to it and hence we dont need gutter spacing
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
     }
     float: left; // first one will float left and then next will follow it. no need any right float here
+
+    // media-query. It's generally a best practice to set the width of all the columnsto 100%, so it displays one single block.
+    // this is what is usually done on mobile devices
+    // all columns transforms in to rows, so the entire webpage will have one single column
+    @include respond(tab-port) {
+      width: 100% !important; // making sure that none of the column styles will overrride this
+    }
   }
 
   // columns which are inside of .row

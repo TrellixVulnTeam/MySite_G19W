@@ -29,7 +29,7 @@
     transform: translate(-50%, -40%);
     text-align: center;
     color: $color-white;
-    padding: 5rem;
+    padding: 2rem;
   }
   &__logo-box {
     position: absolute;
@@ -37,8 +37,24 @@
     left: 2rem;
     margin: 5rem;
     animation: moveFromTop 2s ease;
+    @include respond(tab-port) {
+      top: 0.7rem;
+      left: 0.7rem;
+      margin: 3rem;
+    }
+    @include respond(phone) {
+      top: 0.8rem;
+      left: 0.8rem;
+      margin: 2rem;
+    }
   }
   &__logo {
     height: 10rem;
+    @include respond(tab-port) {
+      height: 8rem;
+    }
+    @include respond(phone) {
+      height: 5rem;
+    }
   }
 }

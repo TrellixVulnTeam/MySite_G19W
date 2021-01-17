@@ -1,11 +1,27 @@
 .heading-primary {
-  letter-spacing: 1rem;
+  letter-spacing: 0.7rem;
   font-size: 6rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 4rem;
   animation: movInLeft 2s ease;
   backface-visibility: hidden;
+  // background-color: peru;
+  // max-width: 100%;
+
+  @include respond(tab-land) {
+    letter-spacing: 0.4rem;
+    font-size: 4rem;
+    // display: none;
+  }
+  @include respond(tab-port) {
+    letter-spacing: 0.3rem;
+    font-size: 3.5rem;
+  }
+  @include respond(phone) {
+    letter-spacing: 0.2rem;
+    font-size: 2.5rem;
+  }
 }
 .heading-primary-sub {
   letter-spacing: 0.2rem;
@@ -14,20 +30,34 @@
   margin-bottom: 10rem;
   line-height: 5rem;
   animation: moveFromRight 2s ease;
+  @include respond(tab-land) {
+    font-size: 1.5rem;
+    // display: none;
+  }
+  @include respond(tab-port) {
+    line-height: 4rem;
+
+    font-size: 1.8rem;
+  }
+  @include respond(phone) {
+    letter-spacing: 0.1rem;
+    font-size: 1.6rem;
+    width: 30rem;
+  }
 }
-.heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  // to get a gradient text where the text starts with light green and ends with dark green, we do this
-  background-image: linear-gradient(
-    to right,
-    $color-primary-light,
-    $color-primary-dark
-  );
-  // now at this point the background occupies the entire block because this is a block element, so we change it to inline block as we want to fit background to the content
-  display: inline-block;
-}
+// .heading-secondary {
+//   font-size: 3.5rem;
+//   text-transform: uppercase;
+//   font-weight: 700;
+//   // to get a gradient text where the text starts with light green and ends with dark green, we do this
+//   background-image: linear-gradient(
+//     to right,
+//     $color-primary-light,
+//     $color-primary-dark
+//   );
+//   // now at this point the background occupies the entire block because this is a block element, so we change it to inline block as we want to fit background to the content
+//   display: inline-block;
+// }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -50,6 +80,10 @@
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
+  @include respond(tab-land) {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+  }
 }
 
 .heading-tertiary {
@@ -57,6 +91,10 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  @include respond(tab-land) {
+    font-size: 1.3rem;
+    letter-spacing: 0.06rem;
+  }
 }
 .paragraph {
   font-size: 1.8rem;
@@ -64,5 +102,8 @@
   // it makes sense to have some margin-bottom: for every paragraph except the last one
   &:not(:last-child) {
     margin-bottom: 3rem;
+  }
+  @include respond(tab-land) {
+    font-size: 1.5rem;
   }
 }

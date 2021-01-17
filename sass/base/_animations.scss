@@ -170,3 +170,94 @@
     transform: rotate(360deg);
   }
 }
+
+@include respond(tab-land) {
+  @keyframes animateHt {
+    0% {
+      transform: translate($min-dist-tab-land, $min-dist-tab-land);
+    }
+
+    25% {
+      transform: translate($min-dist-tab-land, $med-dist-2-tab-land);
+    }
+
+    50% {
+      transform: translate($med-dist-tab-land, $med-dist-2-tab-land);
+    }
+
+    75% {
+      transform: translate($med-dist-tab-land, $min-dist-tab-land);
+    }
+    100% {
+      transform: translate($min-dist-tab-land, $min-dist-tab-land);
+    }
+  }
+}
+@include respond(tab-land) {
+  @keyframes animateCs {
+    0% {
+      transform: translate($min-dist-tab-land, $min-dist-tab-land);
+    }
+
+    25% {
+      transform: translate(-$med-dist-tab-land, $min-dist-tab-land);
+    }
+
+    50% {
+      transform: translate(-$med-dist-tab-land, $med-dist-2-tab-land);
+    }
+
+    75% {
+      transform: translate($min-dist-tab-land, $med-dist-2-tab-land);
+    }
+    100% {
+      transform: translate($min-dist-tab-land, $min-dist-tab-land);
+    }
+  }
+}
+
+@include respond(tab-land) {
+  @keyframes animateJs {
+    0% {
+      transform: translate($min-dist-tab-land, $min-dist-tab-land);
+    }
+
+    25% {
+      transform: translate($med-dist-tab-land, $min-dist-tab-land);
+    }
+
+    50% {
+      transform: translate($med-dist-tab-land, -$med-dist-2-tab-land);
+    }
+
+    75% {
+      transform: translate(-$min-dist-tab-land, -$med-dist-2-tab-land);
+    }
+    100% {
+      transform: translate($min-dist-tab-land, $min-dist-tab-land);
+    }
+  }
+}
+
+@include respond(tab-land) {
+  @keyframes animateFb {
+    0% {
+      transform: translate($min-dist-tab-land, $min-dist-tab-land);
+    }
+
+    25% {
+      transform: translate($min-dist-tab-land, -$med-dist-2-tab-land);
+    }
+
+    50% {
+      transform: translate(-$med-dist-tab-land, -$med-dist-2-tab-land);
+    }
+
+    75% {
+      transform: translate(-$med-dist-tab-land, $min-dist-tab-land);
+    }
+    100% {
+      transform: translate($min-dist-tab-land, $min-dist-tab-land);
+    }
+  }
+}

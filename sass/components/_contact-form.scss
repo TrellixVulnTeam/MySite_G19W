@@ -7,9 +7,13 @@
   );
   border-radius: 2px;
   padding: 3rem;
-  //   border-radius: 3rem;
   margin-bottom: 4rem;
   box-shadow: 0 2rem 4rem;
+  @include respond(tab-land) {
+    margin-bottom: 14rem;
+    border-radius: 1.5px;
+    width: 45rem;
+  }
   &__group {
     margin-bottom: 2rem;
   }
@@ -44,8 +48,6 @@
     outline: none;
     box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
     border-bottom: 0.3rem solid $color-primary;
-    // border-bottom: 0.3rem solid greenyellow;
-    // border-bottom: 0.3rem solid red
   }
   &__input:focus:invalid,
   &__text:focus:invalid {
@@ -93,7 +95,7 @@
   }
 }
 .contact-box {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   padding-left: 1rem;
 
   border-radius: 3px;
@@ -106,6 +108,10 @@
   box-shadow: 0 2rem 4rem;
 
   margin: 50% 20%;
+  @include respond(tab-land) {
+    width: 81%;
+    padding: 2rem 3rem 0 0;
+  }
   &__paragraph {
     font-size: 1.6rem;
     font-weight: 400;
@@ -118,7 +124,7 @@
       position: absolute;
       top: 2;
       left: 0;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-top: 0.4rem;
     }
   }

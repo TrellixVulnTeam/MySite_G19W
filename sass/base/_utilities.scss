@@ -5,13 +5,22 @@
 
 .u-margin-bottom-big {
   margin-bottom: 8rem;
+  @include respond(tab-land) {
+    margin-bottom: 6rem;
+  }
 }
 .u-margin-bottom-medium {
   margin-bottom: 4rem;
+  @include respond(tab-land) {
+    margin-bottom: 2rem;
+  }
 }
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem;
+  @include respond(tab-land) {
+    margin-bottom: 1rem;
+  }
 }
 
 .align-center {
@@ -22,10 +31,16 @@
 }
 .u-margin-left-medium {
   margin-left: 4.5rem;
+  @include respond(tab-land) {
+    margin-left: 3.5rem;
+  }
 }
 
 .u-margin-left-huge {
   margin-left: 10.5rem;
+  @include respond(tab-land) {
+    margin-left: 8.5rem;
+  }
 }
 
 .u-relative {
@@ -36,6 +51,9 @@
 
 .u-medium-padding {
   padding: 2rem 4rem;
+  @include respond(tab-land) {
+    padding: 1.5rem 3.5rem;
+  }
 }
 
 .u-small-padding {

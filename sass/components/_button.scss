@@ -25,6 +25,15 @@
     // changes for <button> element
     border: none;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+      // display: none;
+    }
+    @include respond(phone) {
+      font-size: 1rem;
+      padding: 1.2rem 2rem;
+    }
   }
   &:hover {
     transform: translateY(-0.3rem);
@@ -67,11 +76,18 @@
       width: 2rem;
       padding: 0 0.2rem;
       font-size: 1.2rem;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &:hover::after {
       content: "\2193";
       width: 2rem;
+      @include respond(phone) {
+        display: none;
+      }
     }
   }
 }

@@ -2,22 +2,28 @@
   background-color: $color-grey-dark-3;
   clip-path: polygon(50% 30%, 100% 0, 100% 100%, 0 100%, 0 0);
   padding: 5rem 0 0 0;
-  //   height: 25rem;
   margin-top: -12rem;
   color: $color-grey-light-1;
   z-index: 10;
+  @include respond(tab-land) {
+    padding: 3rem 0;
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
   &__container {
     position: relative;
   }
 
   &__navigation {
     // background-color: white;
-    margin: auto;
     margin-bottom: 8rem;
     width: 80%;
     display: block;
-    padding-left: 10rem;
-    padding-top: 8rem;
+    // padding-top: 8rem;
+    margin: auto;
+    width: fit-content;
+
+    @include respond(tab-land) {
+    }
   }
   &__list {
     list-style: none;
@@ -29,6 +35,9 @@
     text-align: center;
     &:not(:last-child) {
       margin-right: 6rem;
+    }
+    @include respond(tab-land) {
+      font-size: 1.4rem;
     }
   }
   &__link {
@@ -60,18 +69,30 @@
     // background-color: blue;
     text-align: center;
     // margin-top: 6rem;
+    margin-top: 5rem;
     margin-bottom: 3rem;
     letter-spacing: 0.7px;
+    @include respond(tab-land) {
+      font-size: 1.15rem;
+    }
   }
   &__arrow {
-    // background-color: blue;
-    margin: auto;
-    text-align: center;
+    margin-left: 48%;
+    display: inline-block;
+    background: powderblue;
+    transform: translateY(-4rem);
+    @include respond(tab-land) {
+      transform: translateY(-8rem);
+    }
+
     &__icon {
-      margin-top: -2rem;
+      //   margin-top: -2rem;
       font-size: 5rem;
       color: $color-primary-dark;
       cursor: pointer;
+      @include respond(tab-land) {
+        font-size: 4rem;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
   position: relative;
   border-radius: 3px;
   height: $card-height;
-  //   display: none;
+
   &__side {
     height: $card-height;
     transition: all 0.8s ease;
@@ -159,6 +159,10 @@
     right: 3rem;
     text-align: right;
     width: 55%;
+    @include respond(tab-land) {
+      // display: none;
+      font-size: 2rem;
+    }
   }
 
   &__heading-span {
@@ -229,7 +233,15 @@
         &:not(:last-child) {
           border-bottom: 0.1rem solid $color-white;
         }
+
+        @include respond(tab-land) {
+          font-size: 1.2rem;
+        }
       }
+    }
+
+    @include respond(tab-land) {
+      padding: 2.5rem;
     }
   }
 

@@ -20,7 +20,7 @@
     <title>Sandeep Amarnath</title>
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <div class="header__logo-box">
         <img class="header__logo" src="../images/star.png" alt="Logo" />
       </div>
@@ -32,7 +32,7 @@
           high performance websites
         </h2>
         <a
-          href="#"
+          href="#section-about"
           class="btn btn--animate btn--white btn--white--arrow u-medium-padding"
           >View My Profile
           <!-- <span class="btn-arrow">&rarr;</span> -->
@@ -41,7 +41,7 @@
     </header>
     <main>
       <!-- about -->
-      <section class="section-about">
+      <section id="section-about" class="section-about">
         <div class="u-center-text">
           <h2 class="heading-secondary u-margin-bottom-small">About Me</h2>
         </div>
@@ -63,13 +63,14 @@
               <ion-icon class="text-icon" name="heart-outline"></ion-icon>
             </h3>
             <p class="paragraph">
-              Coding is more of my favourite hobby than a livelihood. I involve
-              myself in exploring new technologies from various resources and
-              put most of my time getting better at skills I fall in love with.
-              This way, I have gained handful of knowledge and experience in
-              technologies including HTML, CSS, JavaScript, React and much more.
-              Still I believe my knowledge is incomplete and there is always
-              something more to learn and I love to do that.
+              Coding is more of my favourite hobby than a livelihood and I've
+              been doing it for more than 4 years now. I involve myself in
+              exploring new technologies from various resources and put most of
+              my time getting better at skills I fall in love with. This way, I
+              have gained handful of knowledge and experience in technologies
+              including HTML, CSS, JavaScript, React and much more. Still I
+              believe there is always something more to learn and I love to do
+              that.
             </p>
 
             <h3 class="heading-tertiary u-relative u-margin-bottom-small">
@@ -87,7 +88,7 @@
               platforms where you can proudly announce your business to the
               world with minimum possible investment.&nbsp;
             </p>
-            <a href="#" class="btn-text">More about me &rarr;</a>
+            <a href="#section-contact" class="btn-text">Contact Me &rarr;</a>
             <a href="#" class="btn-text u-margin-left-huge"
               >View My Resume <ion-icon name="document-outline"></ion-icon
             ></a>
@@ -438,7 +439,7 @@
                     <li>React + hooks</li>
                     <li>Redux</li>
                     <li>Firebase + Firestore</li>
-                    <li>Authentication</li>
+                    <li>Google Authentication</li>
                   </ul>
                 </div>
               </div>
@@ -478,7 +479,7 @@
           </div>
         </div>
       </section>
-      <section class="section-contact">
+      <section id="section-contact" class="section-contact">
         <div class="contact-background">
           <div class="u-center-text">
             <h2 class="heading-secondary u-margin-bottom-big">Contact Me</h2>
@@ -575,21 +576,25 @@
     <footer class="footer">
       <div class="row">
         <div class="footer__arrow">
-          <ion-icon
-            class="footer__arrow__icon"
-            name="caret-up-outline"
-          ></ion-icon>
+          <a href="#header">
+            <ion-icon
+              class="footer__arrow__icon"
+              name="caret-up-outline"
+            ></ion-icon
+          ></a>
         </div>
         <div class="footer__navigation">
           <ul class="footer__list">
             <li class="footer__item">
-              <a href="#" class="footer__link"
+              <a href="https://github.com/sandeep194920" class="footer__link"
                 ><ion-icon class="footer__icon" name="logo-github"></ion-icon>
                 Github</a
               >
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link"
+              <a
+                href="https://stackoverflow.com/users/10824697/sandeep-amarnath"
+                class="footer__link"
                 ><ion-icon
                   class="footer__icon"
                   name="logo-stackoverflow"
@@ -604,13 +609,15 @@
               >
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link"
+              <a
+                href="https://www.linkedin.com/in/sandeepamarnath/"
+                class="footer__link"
                 ><ion-icon class="footer__icon" name="logo-linkedin"></ion-icon
                 >LinkedIn</a
               >
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link"
+              <a href="https://sandeepamarnath.medium.com/" class="footer__link"
                 ><ion-icon class="footer__icon" name="logo-medium"></ion-icon
                 >Medium</a
               >

@@ -7,9 +7,18 @@
   // background-color: rgb(32, 32, 34);
   background-color: $color-secondary-dark;
   // background-color: $color-secondary;
-  border-radius: 30%;
+  box-shadow: 0 2rem 4rem;
+  border-radius: 22%;
   margin-top: 2rem;
-
+  @include respond(tab-land) {
+    border-radius: 10%;
+    height: 60rem;
+    margin-left: 3.5rem;
+    margin-top: 7.5rem;
+  }
+  @include respond(tab-port) {
+    display: none;
+  }
   &--name {
     font-size: 1.6rem;
     text-align: center;
@@ -17,12 +26,19 @@
     font-weight: 500;
     color: $color-white;
     text-transform: uppercase;
+    @include respond(tab-land) {
+      font-size: 1.3rem;
+      margin-top: 0.8rem;
+    }
   }
   &__skill {
     position: absolute;
     color: $color-grey-light-1;
     padding: 3rem 3rem 2rem 3rem;
     border-radius: 50%;
+    @include respond(tab-land) {
+      padding: 1rem;
+    }
   }
 
   &--ht {
@@ -52,13 +68,20 @@
   }
   &--rc {
     top: 20rem;
-    left: 30%;
+    left: 33.33%;
     transition: all 7s;
     backface-visibility: hidden;
+    @include respond(tab-land) {
+      top: 22rem;
+      left: 36%;
+    }
   }
 
   .skills__photo {
-    font-size: 10rem;
+    font-size: 6rem;
+    @include respond(tab-land) {
+      font-size: 5rem;
+    }
 
     &--ht {
       color: $color-orange;
@@ -75,9 +98,13 @@
       color: #52f2f7;
     }
     &--rc {
-      font-size: 15rem;
+      font-size: 12rem;
       color: #5fd3f3;
       animation: animateRc 40s infinite;
+
+      @include respond(tab-land) {
+        font-size: 10rem;
+      }
     }
   }
 }

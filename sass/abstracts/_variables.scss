@@ -1,3 +1,5 @@
+@import "../abstracts/mixins";
+
 $color-white: #ffffff;
 $color-black: #000;
 
@@ -43,7 +45,9 @@ $default-font-size: 1.6rem;
 // GRID
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
-$gutter-horizontal: 6rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 8rem;
+$gutter-horizontal-small: 5rem;
 
 // animation
 
@@ -52,6 +56,21 @@ $small-dist: 4rem;
 $med-dist: 30rem;
 $med-dist-2: 37rem;
 $large-dist: 40rem;
+
+$min-dist-tab-land: 0rem;
+$small-dist-tab-land: 6rem;
+$med-dist-tab-land: 25.5rem;
+$med-dist-2-tab-land: 38rem;
+$large-dist-tab-land: 41rem;
+
+// cant write here like this
+// @include respond(tab-land) {
+//   $min-dist: 0rem;
+//   $small-dist: 0rem;
+//   $med-dist: 0rem;
+//   $med-dist-2: 0rem;
+//   $large-dist: 0rem;
+// }
 
 //card
 

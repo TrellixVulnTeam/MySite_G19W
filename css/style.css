@@ -1,3 +1,39 @@
+/*
+0 - 600px :  Phone
+600px - 900px :  Tablet portrait
+900px - 1200px :  Tablet landscape
+[1200px to 1800 px] is where our normal styles apply
+1800px+  : Big desktops
+*/
+/*
+Note : em and rem in media-queries are not affected by our root font-size setting. So, in scss till now we used to have 10px = 1rem = 62.5%. But that doesnt work now.
+ - 1em or 1rem in the mediaquery is always equal to the root font size (coming from the browser which is 16px by default).
+ - We are going to use em instead of rem here because rem in media-query fail to work in some of the browsers. So em is the best option for media query
+ Let's calculate now knowing 1em = 16px
+                             600px = 600/16 = 37.5em
+                             900px = 900/16 = 56.25em
+                             1200px = 1200/16 = 75em
+                             1800px = 1800/16 = 112.5em
+
+*/
+/*
+0 - 600px :  Phone
+600px - 900px :  Tablet portrait
+900px - 1200px :  Tablet landscape
+[1200px to 1800 px] is where our normal styles apply
+1800px+  : Big desktops
+*/
+/*
+Note : em and rem in media-queries are not affected by our root font-size setting. So, in scss till now we used to have 10px = 1rem = 62.5%. But that doesnt work now.
+ - 1em or 1rem in the mediaquery is always equal to the root font size (coming from the browser which is 16px by default).
+ - We are going to use em instead of rem here because rem in media-query fail to work in some of the browsers. So em is the best option for media query
+ Let's calculate now knowing 1em = 16px
+                             600px = 600/16 = 37.5em
+                             900px = 900/16 = 56.25em
+                             1200px = 1200/16 = 75em
+                             1800px = 1800/16 = 112.5em
+
+*/
 *,
 *::after,
 *::before {
@@ -8,7 +44,8 @@
 html {
   /* root font-size */
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -16,18 +53,30 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 2.2rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .u-center-text {
   text-align: center; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
+  @media (max-width: 75em) {
+    .u-margin-bottom-big {
+      margin-bottom: 6rem; } }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem; }
+  @media (max-width: 75em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 2rem; } }
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
+  @media (max-width: 75em) {
+    .u-margin-bottom-small {
+      margin-bottom: 1rem; } }
 
 .align-center {
   text-align: center; }
@@ -37,15 +86,24 @@ body {
 
 .u-margin-left-medium {
   margin-left: 4.5rem; }
+  @media (max-width: 75em) {
+    .u-margin-left-medium {
+      margin-left: 3.5rem; } }
 
 .u-margin-left-huge {
   margin-left: 10.5rem; }
+  @media (max-width: 75em) {
+    .u-margin-left-huge {
+      margin-left: 8.5rem; } }
 
 .u-relative {
   position: relative; }
 
 .u-medium-padding {
   padding: 2rem 4rem; }
+  @media (max-width: 75em) {
+    .u-medium-padding {
+      padding: 1.5rem 3.5rem; } }
 
 .u-small-padding {
   padding: 0.5rem 5rem; }
@@ -54,13 +112,25 @@ body {
   width: 17rem; }
 
 .heading-primary {
-  letter-spacing: 1rem;
+  letter-spacing: 0.7rem;
   font-size: 6rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 4rem;
   animation: movInLeft 2s ease;
   backface-visibility: hidden; }
+  @media (max-width: 75em) {
+    .heading-primary {
+      letter-spacing: 0.4rem;
+      font-size: 4rem; } }
+  @media (max-width: 56.25em) {
+    .heading-primary {
+      letter-spacing: 0.3rem;
+      font-size: 3.5rem; } }
+  @media (max-width: 37.5em) {
+    .heading-primary {
+      letter-spacing: 0.2rem;
+      font-size: 2.5rem; } }
 
 .heading-primary-sub {
   letter-spacing: 0.2rem;
@@ -69,13 +139,18 @@ body {
   margin-bottom: 10rem;
   line-height: 5rem;
   animation: moveFromRight 2s ease; }
-
-.heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  background-image: linear-gradient(to right, #6fd5d5, #2888b4);
-  display: inline-block; }
+  @media (max-width: 75em) {
+    .heading-primary-sub {
+      font-size: 1.5rem; } }
+  @media (max-width: 56.25em) {
+    .heading-primary-sub {
+      line-height: 4rem;
+      font-size: 1.8rem; } }
+  @media (max-width: 37.5em) {
+    .heading-primary-sub {
+      letter-spacing: 0.1rem;
+      font-size: 1.6rem;
+      width: 30rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -90,18 +165,29 @@ body {
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 75em) {
+    .heading-secondary {
+      font-size: 3rem;
+      letter-spacing: 0.3rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1rem; }
+  @media (max-width: 75em) {
+    .heading-tertiary {
+      font-size: 1.3rem;
+      letter-spacing: 0.06rem; } }
 
 .paragraph {
   font-size: 1.8rem;
   line-height: 3.5rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
+  @media (max-width: 75em) {
+    .paragraph {
+      font-size: 1.5rem; } }
 
 @keyframes movInLeft {
   0% {
@@ -207,6 +293,94 @@ body {
   100% {
     transform: rotate(360deg); } }
 
+@media (max-width: 75em) {
+  @keyframes animateHt {
+    0% {
+      transform: translate(0rem, 0rem); }
+    25% {
+      transform: translate(0rem, 38rem); }
+    50% {
+      transform: translate(25.5rem, 38rem); }
+    75% {
+      transform: translate(25.5rem, 0rem); }
+    100% {
+      transform: translate(0rem, 0rem); } } }
+
+@media (max-width: 75em) {
+  @keyframes animateCs {
+    0% {
+      transform: translate(0rem, 0rem); }
+    25% {
+      transform: translate(-25.5rem, 0rem); }
+    50% {
+      transform: translate(-25.5rem, 38rem); }
+    75% {
+      transform: translate(0rem, 38rem); }
+    100% {
+      transform: translate(0rem, 0rem); } } }
+
+@media (max-width: 75em) {
+  @keyframes animateJs {
+    0% {
+      transform: translate(0rem, 0rem); }
+    25% {
+      transform: translate(25.5rem, 0rem); }
+    50% {
+      transform: translate(25.5rem, -38rem); }
+    75% {
+      transform: translate(0rem, -38rem); }
+    100% {
+      transform: translate(0rem, 0rem); } } }
+
+@media (max-width: 75em) {
+  @keyframes animateFb {
+    0% {
+      transform: translate(0rem, 0rem); }
+    25% {
+      transform: translate(0rem, -38rem); }
+    50% {
+      transform: translate(-25.5rem, -38rem); }
+    75% {
+      transform: translate(-25.5rem, 0rem); }
+    100% {
+      transform: translate(0rem, 0rem); } } }
+
+/*
+0 - 600px :  Phone
+600px - 900px :  Tablet portrait
+900px - 1200px :  Tablet landscape
+[1200px to 1800 px] is where our normal styles apply
+1800px+  : Big desktops
+*/
+/*
+Note : em and rem in media-queries are not affected by our root font-size setting. So, in scss till now we used to have 10px = 1rem = 62.5%. But that doesnt work now.
+ - 1em or 1rem in the mediaquery is always equal to the root font size (coming from the browser which is 16px by default).
+ - We are going to use em instead of rem here because rem in media-query fail to work in some of the browsers. So em is the best option for media query
+ Let's calculate now knowing 1em = 16px
+                             600px = 600/16 = 37.5em
+                             900px = 900/16 = 56.25em
+                             1200px = 1200/16 = 75em
+                             1800px = 1800/16 = 112.5em
+
+*/
+/*
+0 - 600px :  Phone
+600px - 900px :  Tablet portrait
+900px - 1200px :  Tablet landscape
+[1200px to 1800 px] is where our normal styles apply
+1800px+  : Big desktops
+*/
+/*
+Note : em and rem in media-queries are not affected by our root font-size setting. So, in scss till now we used to have 10px = 1rem = 62.5%. But that doesnt work now.
+ - 1em or 1rem in the mediaquery is always equal to the root font size (coming from the browser which is 16px by default).
+ - We are going to use em instead of rem here because rem in media-query fail to work in some of the browsers. So em is the best option for media query
+ Let's calculate now knowing 1em = 16px
+                             600px = 600/16 = 37.5em
+                             900px = 900/16 = 56.25em
+                             1200px = 1200/16 = 75em
+                             1800px = 1800/16 = 112.5em
+
+*/
 .header {
   position: relative;
   height: 100vh;
@@ -221,15 +395,31 @@ body {
     transform: translate(-50%, -40%);
     text-align: center;
     color: #ffffff;
-    padding: 5rem; }
+    padding: 2rem; }
   .header__logo-box {
     position: absolute;
     top: 2rem;
     left: 2rem;
     margin: 5rem;
     animation: moveFromTop 2s ease; }
+    @media (max-width: 56.25em) {
+      .header__logo-box {
+        top: 0.7rem;
+        left: 0.7rem;
+        margin: 3rem; } }
+    @media (max-width: 37.5em) {
+      .header__logo-box {
+        top: 0.8rem;
+        left: 0.8rem;
+        margin: 2rem; } }
   .header__logo {
     height: 10rem; }
+    @media (max-width: 56.25em) {
+      .header__logo {
+        height: 8rem; } }
+    @media (max-width: 37.5em) {
+      .header__logo {
+        height: 5rem; } }
 
 .btn {
   display: inline-block;
@@ -249,6 +439,13 @@ body {
     transition: all 0.4s;
     border: none;
     cursor: pointer; }
+    @media (max-width: 56.25em) {
+      .btn, .btn:link, .btn:visited {
+        font-size: 1.2rem; } }
+    @media (max-width: 37.5em) {
+      .btn, .btn:link, .btn:visited {
+        font-size: 1rem;
+        padding: 1.2rem 2rem; } }
   .btn:hover {
     transform: translateY(-0.3rem); }
   .btn:active, .btn:focus {
@@ -272,9 +469,15 @@ body {
     width: 2rem;
     padding: 0 0.2rem;
     font-size: 1.2rem; }
+    @media (max-width: 37.5em) {
+      .btn--white--arrow:link::after, .btn--white--arrow:visited::after {
+        display: none; } }
   .btn--white--arrow:link:hover::after, .btn--white--arrow:visited:hover::after {
     content: "\2193";
     width: 2rem; }
+    @media (max-width: 37.5em) {
+      .btn--white--arrow:link:hover::after, .btn--white--arrow:visited:hover::after {
+        display: none; } }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
@@ -301,8 +504,18 @@ body {
   margin-left: 4rem;
   text-align: center;
   background-color: #212929;
-  border-radius: 30%;
+  box-shadow: 0 2rem 4rem;
+  border-radius: 22%;
   margin-top: 2rem; }
+  @media (max-width: 75em) {
+    .skills-container {
+      border-radius: 10%;
+      height: 60rem;
+      margin-left: 3.5rem;
+      margin-top: 7.5rem; } }
+  @media (max-width: 56.25em) {
+    .skills-container {
+      display: none; } }
   .skills-container--name {
     font-size: 1.6rem;
     text-align: center;
@@ -310,11 +523,18 @@ body {
     font-weight: 500;
     color: #ffffff;
     text-transform: uppercase; }
+    @media (max-width: 75em) {
+      .skills-container--name {
+        font-size: 1.3rem;
+        margin-top: 0.8rem; } }
   .skills-container__skill {
     position: absolute;
     color: #f7f7f7;
     padding: 3rem 3rem 2rem 3rem;
     border-radius: 50%; }
+    @media (max-width: 75em) {
+      .skills-container__skill {
+        padding: 1rem; } }
   .skills-container--ht {
     top: 4rem;
     left: 4rem;
@@ -337,11 +557,18 @@ body {
     backface-visibility: hidden; }
   .skills-container--rc {
     top: 20rem;
-    left: 30%;
+    left: 33.33%;
     transition: all 7s;
     backface-visibility: hidden; }
+    @media (max-width: 75em) {
+      .skills-container--rc {
+        top: 22rem;
+        left: 36%; } }
   .skills-container .skills__photo {
-    font-size: 10rem; }
+    font-size: 6rem; }
+    @media (max-width: 75em) {
+      .skills-container .skills__photo {
+        font-size: 5rem; } }
     .skills-container .skills__photo--ht {
       color: #ff673d; }
     .skills-container .skills__photo--cs {
@@ -351,9 +578,12 @@ body {
     .skills-container .skills__photo--js {
       color: #52f2f7; }
     .skills-container .skills__photo--rc {
-      font-size: 15rem;
+      font-size: 12rem;
       color: #5fd3f3;
       animation: animateRc 40s infinite; }
+      @media (max-width: 75em) {
+        .skills-container .skills__photo--rc {
+          font-size: 10rem; } }
 
 .profile {
   position: relative;
@@ -367,6 +597,11 @@ body {
     transform: translate(0rem, -2rem);
     width: 24rem;
     height: 30rem; }
+    @media (max-width: 75em) {
+      .profile__photo {
+        transform: translate(0rem, 0rem);
+        width: 24rem;
+        height: 25rem; } }
   .profile__caption {
     position: absolute;
     top: 50%;
@@ -458,6 +693,9 @@ body {
     right: 3rem;
     text-align: right;
     width: 55%; }
+    @media (max-width: 75em) {
+      .card__heading {
+        font-size: 2rem; } }
   .card__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
@@ -487,6 +725,12 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 0.1rem solid #ffffff; }
+        @media (max-width: 75em) {
+          .card__details ul li {
+            font-size: 1.2rem; } }
+    @media (max-width: 75em) {
+      .card__details {
+        padding: 2.5rem; } }
   .card__cta {
     position: absolute;
     padding: 12%;
@@ -509,6 +753,11 @@ body {
   padding: 3rem;
   margin-bottom: 4rem;
   box-shadow: 0 2rem 4rem; }
+  @media (max-width: 75em) {
+    .contact-form {
+      margin-bottom: 14rem;
+      border-radius: 1.5px;
+      width: 45rem; } }
   .contact-form__group {
     margin-bottom: 2rem; }
   .contact-form__group:first-child {
@@ -568,12 +817,16 @@ body {
       right: 2; }
 
 .contact-box {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   padding-left: 1rem;
   border-radius: 3px;
   background-image: linear-gradient(156deg, #f7f7f7 1%, rgba(111, 213, 213, 0.4) 60%, rgba(40, 136, 180, 0.4) 80%);
   box-shadow: 0 2rem 4rem;
   margin: 50% 20%; }
+  @media (max-width: 75em) {
+    .contact-box {
+      width: 81%;
+      padding: 2rem 3rem 0 0; } }
   .contact-box__paragraph {
     font-size: 1.6rem;
     font-weight: 400;
@@ -586,27 +839,57 @@ body {
       position: absolute;
       top: 2;
       left: 0;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-top: 0.4rem; }
 
 .section-about {
   padding: 6rem 0;
   background-color: #f7f7f7; }
+  @media (max-width: 75em) {
+    .section-about {
+      padding: 4rem 2.5rem; } }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 3rem 4rem; } }
 
 .section-projects {
   padding: 6rem 0; }
+  @media (max-width: 75em) {
+    .section-projects {
+      padding: 1rem 2.5rem; } }
+  @media (max-width: 56.25em) {
+    .section-projects {
+      padding: 4rem 3rem; } }
 
 .section-contact {
   background-color: #f7f7f7; }
+  @media (max-width: 75em) {
+    .section-contact {
+      padding: 1rem 4.5rem; } }
+  @media (max-width: 56.25em) {
+    .section-contact {
+      padding: 4rem 3rem; } }
 
 .heading-primary {
-  letter-spacing: 1rem;
+  letter-spacing: 0.7rem;
   font-size: 6rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 4rem;
   animation: movInLeft 2s ease;
   backface-visibility: hidden; }
+  @media (max-width: 75em) {
+    .heading-primary {
+      letter-spacing: 0.4rem;
+      font-size: 4rem; } }
+  @media (max-width: 56.25em) {
+    .heading-primary {
+      letter-spacing: 0.3rem;
+      font-size: 3.5rem; } }
+  @media (max-width: 37.5em) {
+    .heading-primary {
+      letter-spacing: 0.2rem;
+      font-size: 2.5rem; } }
 
 .heading-primary-sub {
   letter-spacing: 0.2rem;
@@ -615,13 +898,18 @@ body {
   margin-bottom: 10rem;
   line-height: 5rem;
   animation: moveFromRight 2s ease; }
-
-.heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  background-image: linear-gradient(to right, #6fd5d5, #2888b4);
-  display: inline-block; }
+  @media (max-width: 75em) {
+    .heading-primary-sub {
+      font-size: 1.5rem; } }
+  @media (max-width: 56.25em) {
+    .heading-primary-sub {
+      line-height: 4rem;
+      font-size: 1.8rem; } }
+  @media (max-width: 37.5em) {
+    .heading-primary-sub {
+      letter-spacing: 0.1rem;
+      font-size: 1.6rem;
+      width: 30rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -636,40 +924,82 @@ body {
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 75em) {
+    .heading-secondary {
+      font-size: 3rem;
+      letter-spacing: 0.3rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1rem; }
+  @media (max-width: 75em) {
+    .heading-tertiary {
+      font-size: 1.3rem;
+      letter-spacing: 0.06rem; } }
 
 .paragraph {
   font-size: 1.8rem;
   line-height: 3.5rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
+  @media (max-width: 75em) {
+    .paragraph {
+      font-size: 1.5rem; } }
 
+/*
+0 - 600px :  Phone
+600px - 900px :  Tablet portrait
+900px - 1200px :  Tablet landscape
+[1200px to 1800 px] is where our normal styles apply
+1800px+  : Big desktops
+*/
+/*
+Note : em and rem in media-queries are not affected by our root font-size setting. So, in scss till now we used to have 10px = 1rem = 62.5%. But that doesnt work now.
+ - 1em or 1rem in the mediaquery is always equal to the root font size (coming from the browser which is 16px by default).
+ - We are going to use em instead of rem here because rem in media-query fail to work in some of the browsers. So em is the best option for media query
+ Let's calculate now knowing 1em = 16px
+                             600px = 600/16 = 37.5em
+                             900px = 900/16 = 56.25em
+                             1200px = 1200/16 = 75em
+                             1800px = 1800/16 = 112.5em
+
+*/
 .row {
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
+      margin-right: 8rem; }
+      @media (max-width: 75em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 5rem; } }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
+    width: calc((100% - 8rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 *6rem) / 3); }
+    width: calc((100% - 2 *8rem) / 3); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 *6rem) / 4); }
+    width: calc((100% - 3 *8rem) / 4); }
   .row .col-2-of-3 {
-    width: calc( (2 * (100% - 2 *6rem) / 3) + 6rem); }
+    width: calc( (2 * (100% - 2 *8rem) / 3) + 8rem); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 *6rem) / 4) + 6rem); }
+    width: calc( 2 * ((100% - 3 *8rem) / 4) + 8rem); }
   .row .col-3-of-4 {
-    width: calc( (3 * ((100% - 3 *6rem) / 4)) + 2 *6rem); }
+    width: calc( (3 * ((100% - 3 *8rem) / 4)) + 2 *8rem); }
   .row::after {
     content: "";
     display: table;
@@ -679,6 +1009,9 @@ body {
   background-image: linear-gradient(156deg, #f7f7f7 20%, rgba(111, 213, 213, 0.4) 60%, rgba(40, 136, 180, 0.4) 80%);
   width: 100%;
   padding-top: 6rem; }
+  @media (max-width: 75em) {
+    .contact-background {
+      padding-top: 4rem; } }
 
 .footer {
   background-color: #333;
@@ -687,15 +1020,18 @@ body {
   margin-top: -12rem;
   color: #f7f7f7;
   z-index: 10; }
+  @media (max-width: 75em) {
+    .footer {
+      padding: 3rem 0;
+      clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0); } }
   .footer__container {
     position: relative; }
   .footer__navigation {
-    margin: auto;
     margin-bottom: 8rem;
     width: 80%;
     display: block;
-    padding-left: 10rem;
-    padding-top: 8rem; }
+    margin: auto;
+    width: fit-content; }
   .footer__list {
     list-style: none;
     margin: auto; }
@@ -705,6 +1041,9 @@ body {
     text-align: center; }
     .footer__item:not(:last-child) {
       margin-right: 6rem; }
+    @media (max-width: 75em) {
+      .footer__item {
+        font-size: 1.4rem; } }
   .footer__link:visited, .footer__link:link {
     color: #f7f7f7;
     background-color: #333;
@@ -722,13 +1061,24 @@ body {
   .footer__copyright {
     font-size: 1.3rem;
     text-align: center;
+    margin-top: 5rem;
     margin-bottom: 3rem;
     letter-spacing: 0.7px; }
+    @media (max-width: 75em) {
+      .footer__copyright {
+        font-size: 1.15rem; } }
   .footer__arrow {
-    margin: auto;
-    text-align: center; }
+    margin-left: 48%;
+    display: inline-block;
+    background: powderblue;
+    transform: translateY(-4rem); }
+    @media (max-width: 75em) {
+      .footer__arrow {
+        transform: translateY(-8rem); } }
     .footer__arrow__icon {
-      margin-top: -2rem;
       font-size: 5rem;
       color: #2888b4;
       cursor: pointer; }
+      @media (max-width: 75em) {
+        .footer__arrow__icon {
+          font-size: 4rem; } }

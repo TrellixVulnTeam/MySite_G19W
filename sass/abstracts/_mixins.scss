@@ -7,3 +7,66 @@
     clear: both; // clears both float left and right
   }
 }
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px :  Phone
+600px - 900px :  Tablet portrait
+900px - 1200px :  Tablet landscape
+[1200px to 1800 px] is where our normal styles apply
+1800px+  : Big desktops
+*/
+
+// @mixin respond($breakpoint){
+//   @if $breakpoint == phone {
+//      @media (max-width: 600px) {
+//          @content;
+//      }
+//   }
+// }
+
+// FONT-SIZE
+/*
+Note : em and rem in media-queries are not affected by our root font-size setting. So, in scss till now we used to have 10px = 1rem = 62.5%. But that doesnt work now.
+ - 1em or 1rem in the mediaquery is always equal to the root font size (coming from the browser which is 16px by default).
+ - We are going to use em instead of rem here because rem in media-query fail to work in some of the browsers. So em is the best option for media query
+ Let's calculate now knowing 1em = 16px
+                             600px = 600/16 = 37.5em
+                             900px = 900/16 = 56.25em
+                             1200px = 1200/16 = 75em
+                             1800px = 1800/16 = 112.5em
+
+*/
+// argument type mixin
+@mixin respond($breakpoint) {
+  // this can be written in any order but should be called in descending order in the respective sass file
+  @if $breakpoint == tab-land {
+    // applies to all devices smaller or equal to 1200px or 75em
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    // applies to <= 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    // applies to <=600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  // for 1200px to 1800px, none of the media queries will apply and hence our old css will apply
+
+  @if $breakpoint == big-desktop {
+    // applies to > 1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
