@@ -7,12 +7,16 @@
   );
   border-radius: 2px;
   padding: 3rem;
-  margin-bottom: 4rem;
   box-shadow: 0 2rem 4rem;
   @include respond(tab-land) {
     margin-bottom: 14rem;
     border-radius: 1.5px;
     width: 45rem;
+  }
+  @include respond(tab-port) {
+    border-radius: 1.5px;
+    width: 80%;
+    margin: 2.5rem auto;
   }
   &__group {
     margin-bottom: 2rem;
@@ -95,9 +99,6 @@
   }
 }
 .contact-box {
-  padding: 3rem 2rem;
-  padding-left: 1rem;
-
   border-radius: 3px;
   background-image: linear-gradient(
     156deg,
@@ -106,20 +107,22 @@
     rgba($color-primary-dark, 0.4) 80%
   );
   box-shadow: 0 2rem 4rem;
-
+  width: 30rem;
   margin: 50% 20%;
-  @include respond(tab-land) {
-    width: 81%;
-    padding: 2rem 3rem 0 0;
+  @include respond(tab-port) {
+    margin: 1% auto 12% auto;
   }
+
   &__paragraph {
     font-size: 1.6rem;
     font-weight: 400;
     margin: 2rem;
+    text-align: left;
     font-weight: 400;
     position: relative;
     padding: 2rem 3rem;
     color: $color-secondary-dark;
+
     &__icon {
       position: absolute;
       top: 2;
@@ -128,4 +131,7 @@
       margin-top: 0.4rem;
     }
   }
+}
+.contact__heading {
+  text-align: center;
 }

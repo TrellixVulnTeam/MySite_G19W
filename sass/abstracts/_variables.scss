@@ -47,7 +47,7 @@ $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 8rem;
-$gutter-horizontal-small: 5rem;
+$gutter-horizontal-small: 8rem;
 
 // animation
 
@@ -63,14 +63,11 @@ $med-dist-tab-land: 25.5rem;
 $med-dist-2-tab-land: 38rem;
 $large-dist-tab-land: 41rem;
 
-// cant write here like this
-// @include respond(tab-land) {
-//   $min-dist: 0rem;
-//   $small-dist: 0rem;
-//   $med-dist: 0rem;
-//   $med-dist-2: 0rem;
-//   $large-dist: 0rem;
-// }
+$min-dist-tab-port: 0rem;
+$small-dist-tab-port: 6rem;
+$med-dist-tab-port: 35rem;
+$med-dist-2-tab-port: 38.5rem;
+$large-dist-tab-port: 41rem;
 
 //card
 

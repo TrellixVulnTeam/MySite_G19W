@@ -53,12 +53,18 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 2.2rem; }
+  @media (max-width: 75em) {
+    body {
+      padding: 0.5rem; } }
   @media (max-width: 56.25em) {
     body {
       padding: 0; } }
 
 .u-center-text {
   text-align: center; }
+
+.u-padding-top-small {
+  padding-top: 1.5rem; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
@@ -345,6 +351,58 @@ body {
     100% {
       transform: translate(0rem, 0rem); } } }
 
+@media (max-width: 56.25em) {
+  @keyframes animateHt {
+    0% {
+      transform: translate(0rem, 0rem); }
+    25% {
+      transform: translate(0rem, 38.5rem); }
+    50% {
+      transform: translate(35rem, 38.5rem); }
+    75% {
+      transform: translate(35rem, 0rem); }
+    100% {
+      transform: translate(0rem, 0rem); } } }
+
+@media (max-width: 56.25em) {
+  @keyframes animateCs {
+    0% {
+      transform: translate(0rem, 0rem); }
+    25% {
+      transform: translate(-35rem, 0rem); }
+    50% {
+      transform: translate(-35rem, 38.5rem); }
+    75% {
+      transform: translate(0rem, 38.5rem); }
+    100% {
+      transform: translate(0rem, 0rem); } } }
+
+@media (max-width: 56.25em) {
+  @keyframes animateJs {
+    0% {
+      transform: translate(0rem, 0rem); }
+    25% {
+      transform: translate(35rem, 0rem); }
+    50% {
+      transform: translate(35rem, -38.5rem); }
+    75% {
+      transform: translate(0rem, -38.5rem); }
+    100% {
+      transform: translate(0rem, 0rem); } } }
+
+@media (max-width: 56.25em) {
+  @keyframes animateFb {
+    0% {
+      transform: translate(0rem, 0rem); }
+    25% {
+      transform: translate(0rem, -38.5rem); }
+    50% {
+      transform: translate(-35rem, -38.5rem); }
+    75% {
+      transform: translate(-35rem, 0rem); }
+    100% {
+      transform: translate(0rem, 0rem); } } }
+
 /*
 0 - 600px :  Phone
 600px - 900px :  Tablet portrait
@@ -511,11 +569,15 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     .skills-container {
       border-radius: 10%;
       height: 60rem;
-      margin-left: 3.5rem;
-      margin-top: 7.5rem; } }
+      margin-left: 1.5rem;
+      margin-top: 2.5rem; } }
   @media (max-width: 56.25em) {
     .skills-container {
-      display: none; } }
+      height: 60rem;
+      border-radius: 2%;
+      width: 50rem;
+      margin: auto;
+      margin-top: 2rem; } }
   .skills-container--name {
     font-size: 1.6rem;
     text-align: center;
@@ -593,15 +655,19 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   margin-bottom: -2rem;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%); }
+  @media (max-width: 75em) {
+    .profile {
+      width: 22rem;
+      height: 22rem; } }
   .profile__photo {
     transform: translate(0rem, -2rem);
     width: 24rem;
     height: 30rem; }
     @media (max-width: 75em) {
       .profile__photo {
-        transform: translate(0rem, 0rem);
-        width: 24rem;
-        height: 25rem; } }
+        transform: translate(0rem, -2rem);
+        width: 22rem;
+        height: 28rem; } }
   .profile__caption {
     position: absolute;
     top: 50%;
@@ -635,6 +701,10 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   position: relative;
   border-radius: 3px;
   height: 50rem; }
+  @media (max-width: 56.25em) {
+    .card {
+      max-width: 40rem;
+      margin: auto; } }
   .card__side {
     height: 50rem;
     transition: all 0.8s ease;
@@ -671,6 +741,9 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     background-size: cover;
     height: 20rem;
     background-blend-mode: saturation; }
+    @media (max-width: 56.25em) {
+      .card__picture {
+        height: 23rem; } }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, rgba(156, 34, 146, 0.8), rgba(194, 108, 183, 0.8)), url(/images/netflix-img.jpeg); }
     .card__picture--2 {
@@ -696,6 +769,9 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     @media (max-width: 75em) {
       .card__heading {
         font-size: 2rem; } }
+    @media (max-width: 56.25em) {
+      .card__heading {
+        font-size: 2.8rem; } }
   .card__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
@@ -728,9 +804,15 @@ Note : em and rem in media-queries are not affected by our root font-size settin
         @media (max-width: 75em) {
           .card__details ul li {
             font-size: 1.2rem; } }
+        @media (max-width: 56.25em) {
+          .card__details ul li {
+            font-size: 1.4rem; } }
     @media (max-width: 75em) {
       .card__details {
         padding: 2.5rem; } }
+    @media (max-width: 56.25em) {
+      .card__details {
+        padding: 1.5rem; } }
   .card__cta {
     position: absolute;
     padding: 12%;
@@ -751,13 +833,17 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   background-image: linear-gradient(156deg, #f7f7f7 2%, rgba(111, 213, 213, 0.4) 60%, rgba(40, 136, 180, 0.4) 80%);
   border-radius: 2px;
   padding: 3rem;
-  margin-bottom: 4rem;
   box-shadow: 0 2rem 4rem; }
   @media (max-width: 75em) {
     .contact-form {
       margin-bottom: 14rem;
       border-radius: 1.5px;
       width: 45rem; } }
+  @media (max-width: 56.25em) {
+    .contact-form {
+      border-radius: 1.5px;
+      width: 80%;
+      margin: 2.5rem auto; } }
   .contact-form__group {
     margin-bottom: 2rem; }
   .contact-form__group:first-child {
@@ -817,20 +903,19 @@ Note : em and rem in media-queries are not affected by our root font-size settin
       right: 2; }
 
 .contact-box {
-  padding: 3rem 2rem;
-  padding-left: 1rem;
   border-radius: 3px;
   background-image: linear-gradient(156deg, #f7f7f7 1%, rgba(111, 213, 213, 0.4) 60%, rgba(40, 136, 180, 0.4) 80%);
   box-shadow: 0 2rem 4rem;
+  width: 30rem;
   margin: 50% 20%; }
-  @media (max-width: 75em) {
+  @media (max-width: 56.25em) {
     .contact-box {
-      width: 81%;
-      padding: 2rem 3rem 0 0; } }
+      margin: 1% auto 12% auto; } }
   .contact-box__paragraph {
     font-size: 1.6rem;
     font-weight: 400;
     margin: 2rem;
+    text-align: left;
     font-weight: 400;
     position: relative;
     padding: 2rem 3rem;
@@ -841,6 +926,9 @@ Note : em and rem in media-queries are not affected by our root font-size settin
       left: 0;
       font-size: 1.6rem;
       margin-top: 0.4rem; }
+
+.contact__heading {
+  text-align: center; }
 
 .section-about {
   padding: 6rem 0;
@@ -856,16 +944,16 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   padding: 6rem 0; }
   @media (max-width: 75em) {
     .section-projects {
-      padding: 1rem 2.5rem; } }
+      padding: 1rem 3rem; } }
   @media (max-width: 56.25em) {
     .section-projects {
-      padding: 4rem 3rem; } }
+      padding: 4rem 4rem; } }
 
 .section-contact {
   background-color: #f7f7f7; }
   @media (max-width: 75em) {
     .section-contact {
-      padding: 1rem 4.5rem; } }
+      padding: 1rem 2.5rem; } }
   @media (max-width: 56.25em) {
     .section-contact {
       padding: 4rem 3rem; } }
@@ -980,7 +1068,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
       margin-right: 8rem; }
       @media (max-width: 75em) {
         .row [class^="col-"]:not(:last-child) {
-          margin-right: 5rem; } }
+          margin-right: 8rem; } }
       @media (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
@@ -1012,26 +1100,26 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   @media (max-width: 75em) {
     .contact-background {
       padding-top: 4rem; } }
+  @media (max-width: 56.25em) {
+    .contact-background {
+      padding-top: 0rem; } }
 
 .footer {
   background-color: #333;
-  clip-path: polygon(50% 30%, 100% 0, 100% 100%, 0 100%, 0 0);
   padding: 5rem 0 0 0;
-  margin-top: -12rem;
   color: #f7f7f7;
   z-index: 10; }
   @media (max-width: 75em) {
     .footer {
-      padding: 3rem 0;
-      clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0); } }
+      padding: 3rem 0; } }
   .footer__container {
     position: relative; }
   .footer__navigation {
     margin-bottom: 8rem;
     width: 80%;
-    display: block;
+    display: inline-block;
     margin: auto;
-    width: fit-content; }
+    width: 100%; }
   .footer__list {
     list-style: none;
     margin: auto; }
@@ -1068,13 +1156,12 @@ Note : em and rem in media-queries are not affected by our root font-size settin
       .footer__copyright {
         font-size: 1.15rem; } }
   .footer__arrow {
-    margin-left: 48%;
     display: inline-block;
     background: powderblue;
-    transform: translateY(-4rem); }
+    transform: translateY(-7rem); }
     @media (max-width: 75em) {
       .footer__arrow {
-        transform: translateY(-8rem); } }
+        transform: translateY(-5rem); } }
     .footer__arrow__icon {
       font-size: 5rem;
       color: #2888b4;

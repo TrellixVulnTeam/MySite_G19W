@@ -13,11 +13,15 @@
   @include respond(tab-land) {
     border-radius: 10%;
     height: 60rem;
-    margin-left: 3.5rem;
-    margin-top: 7.5rem;
+    margin-left: 1.5rem;
+    margin-top: 2.5rem;
   }
   @include respond(tab-port) {
-    display: none;
+    height: 60rem;
+    border-radius: 2%;
+    width: 50rem;
+    margin: auto;
+    margin-top: 2rem;
   }
   &--name {
     font-size: 1.6rem;

@@ -1,6 +1,7 @@
 @import "../abstracts//variables";
 
 .row {
+  // text-align: center;
   // max-width vs width - width forces it to stay the mentioned size while max-width allows it to shrink if necessary based on viewport width;
   // min-width: is the width it cannot not be smaller than the specified number. It introduces horizontal scroll;
   //   width: 295rem;

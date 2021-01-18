@@ -261,3 +261,94 @@
     }
   }
 }
+
+@include respond(tab-port) {
+  @keyframes animateHt {
+    0% {
+      transform: translate($min-dist-tab-port, $min-dist-tab-port);
+    }
+
+    25% {
+      transform: translate($min-dist-tab-port, $med-dist-2-tab-port);
+    }
+
+    50% {
+      transform: translate($med-dist-tab-port, $med-dist-2-tab-port);
+    }
+
+    75% {
+      transform: translate($med-dist-tab-port, $min-dist-tab-port);
+    }
+    100% {
+      transform: translate($min-dist-tab-port, $min-dist-tab-port);
+    }
+  }
+}
+@include respond(tab-port) {
+  @keyframes animateCs {
+    0% {
+      transform: translate($min-dist-tab-port, $min-dist-tab-port);
+    }
+
+    25% {
+      transform: translate(-$med-dist-tab-port, $min-dist-tab-port);
+    }
+
+    50% {
+      transform: translate(-$med-dist-tab-port, $med-dist-2-tab-port);
+    }
+
+    75% {
+      transform: translate($min-dist-tab-port, $med-dist-2-tab-port);
+    }
+    100% {
+      transform: translate($min-dist-tab-port, $min-dist-tab-port);
+    }
+  }
+}
+
+@include respond(tab-port) {
+  @keyframes animateJs {
+    0% {
+      transform: translate($min-dist-tab-port, $min-dist-tab-port);
+    }
+
+    25% {
+      transform: translate($med-dist-tab-port, $min-dist-tab-port);
+    }
+
+    50% {
+      transform: translate($med-dist-tab-port, -$med-dist-2-tab-port);
+    }
+
+    75% {
+      transform: translate(-$min-dist-tab-port, -$med-dist-2-tab-port);
+    }
+    100% {
+      transform: translate($min-dist-tab-port, $min-dist-tab-port);
+    }
+  }
+}
+
+@include respond(tab-port) {
+  @keyframes animateFb {
+    0% {
+      transform: translate($min-dist-tab-port, $min-dist-tab-port);
+    }
+
+    25% {
+      transform: translate($min-dist-tab-port, -$med-dist-2-tab-port);
+    }
+
+    50% {
+      transform: translate(-$med-dist-tab-port, -$med-dist-2-tab-port);
+    }
+
+    75% {
+      transform: translate(-$med-dist-tab-port, $min-dist-tab-port);
+    }
+    100% {
+      transform: translate($min-dist-tab-port, $min-dist-tab-port);
+    }
+  }
+}

@@ -4,6 +4,15 @@
   position: relative;
   border-radius: 3px;
   height: $card-height;
+  @include respond(tab-land) {
+    // &:first-child {
+    //   margin-left: 2rem;
+    // }
+  }
+  @include respond(tab-port) {
+    max-width: 40rem;
+    margin: auto;
+  }
 
   &__side {
     height: $card-height;
@@ -88,6 +97,9 @@
     background-size: cover;
     height: 20rem;
     background-blend-mode: saturation;
+    @include respond(tab-port) {
+      height: 23rem;
+    }
 
     &--1 {
       background-image: linear-gradient(
@@ -163,6 +175,11 @@
       // display: none;
       font-size: 2rem;
     }
+
+    @include respond(tab-port) {
+      // display: none;
+      font-size: 2.8rem;
+    }
   }
 
   &__heading-span {
@@ -230,6 +247,7 @@
         text-align: center;
         font-size: 1.5rem;
         padding: 1rem;
+
         &:not(:last-child) {
           border-bottom: 0.1rem solid $color-white;
         }
@@ -237,11 +255,17 @@
         @include respond(tab-land) {
           font-size: 1.2rem;
         }
+        @include respond(tab-port) {
+          font-size: 1.4rem;
+        }
       }
     }
 
     @include respond(tab-land) {
       padding: 2.5rem;
+    }
+    @include respond(tab-port) {
+      padding: 1.5rem;
     }
   }
 

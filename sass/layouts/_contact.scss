@@ -10,4 +10,7 @@
   @include respond(tab-land) {
     padding-top: 4rem;
   }
+  @include respond(tab-port) {
+    padding-top: 0rem;
+  }
 }
