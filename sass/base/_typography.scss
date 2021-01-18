@@ -16,7 +16,7 @@
   }
   @include respond(tab-port) {
     letter-spacing: 0.3rem;
-    font-size: 3.5rem;
+    font-size: 3.9rem;
   }
   @include respond(phone) {
     letter-spacing: 0.2rem;
@@ -37,7 +37,7 @@
   @include respond(tab-port) {
     line-height: 4rem;
 
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   @include respond(phone) {
     letter-spacing: 0.1rem;

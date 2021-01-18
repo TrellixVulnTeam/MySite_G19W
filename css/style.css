@@ -132,7 +132,7 @@ body {
   @media (max-width: 56.25em) {
     .heading-primary {
       letter-spacing: 0.3rem;
-      font-size: 3.5rem; } }
+      font-size: 3.9rem; } }
   @media (max-width: 37.5em) {
     .heading-primary {
       letter-spacing: 0.2rem;
@@ -151,7 +151,7 @@ body {
   @media (max-width: 56.25em) {
     .heading-primary-sub {
       line-height: 4rem;
-      font-size: 1.8rem; } }
+      font-size: 1.4rem; } }
   @media (max-width: 37.5em) {
     .heading-primary-sub {
       letter-spacing: 0.1rem;
@@ -453,7 +453,11 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     transform: translate(-50%, -40%);
     text-align: center;
     color: #ffffff;
-    padding: 2rem; }
+    padding: 2rem;
+    width: 57%; }
+    @media (max-width: 56.25em) {
+      .header__text-box {
+        width: 80%; } }
   .header__logo-box {
     position: absolute;
     top: 2rem;
@@ -462,9 +466,9 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     animation: moveFromTop 2s ease; }
     @media (max-width: 56.25em) {
       .header__logo-box {
-        top: 0.7rem;
-        left: 0.7rem;
-        margin: 3rem; } }
+        top: 0.3rem;
+        left: 0.3rem;
+        margin: 2rem; } }
     @media (max-width: 37.5em) {
       .header__logo-box {
         top: 0.8rem;
@@ -474,7 +478,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     height: 10rem; }
     @media (max-width: 56.25em) {
       .header__logo {
-        height: 8rem; } }
+        height: 7rem; } }
     @media (max-width: 37.5em) {
       .header__logo {
         height: 5rem; } }
@@ -559,7 +563,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   position: relative;
   width: 100%;
   height: 67rem;
-  margin-left: 4rem;
+  margin-left: 0rem;
   text-align: center;
   background-color: #212929;
   box-shadow: 0 2rem 4rem;
@@ -659,6 +663,10 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     .profile {
       width: 22rem;
       height: 22rem; } }
+  @media (max-width: 56.25em) {
+    .profile {
+      width: 20rem;
+      height: 20rem; } }
   .profile__photo {
     transform: translate(0rem, -2rem);
     width: 24rem;
@@ -668,6 +676,11 @@ Note : em and rem in media-queries are not affected by our root font-size settin
         transform: translate(0rem, -2rem);
         width: 22rem;
         height: 28rem; } }
+    @media (max-width: 56.25em) {
+      .profile__photo {
+        transform: translate(0rem, -3rem);
+        width: 20rem;
+        height: 26rem; } }
   .profile__caption {
     position: absolute;
     top: 50%;
@@ -973,7 +986,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   @media (max-width: 56.25em) {
     .heading-primary {
       letter-spacing: 0.3rem;
-      font-size: 3.5rem; } }
+      font-size: 3.9rem; } }
   @media (max-width: 37.5em) {
     .heading-primary {
       letter-spacing: 0.2rem;
@@ -992,7 +1005,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   @media (max-width: 56.25em) {
     .heading-primary-sub {
       line-height: 4rem;
-      font-size: 1.8rem; } }
+      font-size: 1.4rem; } }
   @media (max-width: 37.5em) {
     .heading-primary-sub {
       letter-spacing: 0.1rem;
@@ -1112,14 +1125,19 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   @media (max-width: 75em) {
     .footer {
       padding: 3rem 0; } }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 2rem 2rem; } }
   .footer__container {
     position: relative; }
   .footer__navigation {
     margin-bottom: 8rem;
-    width: 80%;
     display: inline-block;
     margin: auto;
     width: 100%; }
+    @media (max-width: 75em) {
+      .footer__navigation {
+        margin-top: 2rem; } }
   .footer__list {
     list-style: none;
     margin: auto; }
@@ -1132,6 +1150,11 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     @media (max-width: 75em) {
       .footer__item {
         font-size: 1.4rem; } }
+    @media (max-width: 56.25em) {
+      .footer__item {
+        font-size: 1.2rem; }
+        .footer__item:not(:last-child) {
+          margin-right: 4rem; } }
   .footer__link:visited, .footer__link:link {
     color: #f7f7f7;
     background-color: #333;
@@ -1155,6 +1178,9 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     @media (max-width: 75em) {
       .footer__copyright {
         font-size: 1.15rem; } }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        font-size: 1rem; } }
   .footer__arrow {
     display: inline-block;
     background: powderblue;

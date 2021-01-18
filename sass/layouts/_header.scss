@@ -13,15 +13,6 @@
   background-size: cover; /* fits completely*/
   background-position: top;
 
-  // background-image: linear-gradient(
-  //     to right bottom,
-  //     rgba($color-primary-light, 1),
-  //     rgba($color-primary-dark, 0.6)
-  //   ),
-  //   url(../images/header_bg_2.jpg);
-  // background-size: cover;
-  // background-position: top;
-
   &__text-box {
     position: absolute;
     top: 40%;
@@ -30,6 +21,11 @@
     text-align: center;
     color: $color-white;
     padding: 2rem;
+    // background-color: orange;
+    width: 57%;
+    @include respond(tab-port) {
+      width: 80%;
+    }
   }
   &__logo-box {
     position: absolute;
@@ -38,9 +34,9 @@
     margin: 5rem;
     animation: moveFromTop 2s ease;
     @include respond(tab-port) {
-      top: 0.7rem;
-      left: 0.7rem;
-      margin: 3rem;
+      top: 0.3rem;
+      left: 0.3rem;
+      margin: 2rem;
     }
     @include respond(phone) {
       top: 0.8rem;
@@ -51,7 +47,7 @@
   &__logo {
     height: 10rem;
     @include respond(tab-port) {
-      height: 8rem;
+      height: 7rem;
     }
     @include respond(phone) {
       height: 5rem;

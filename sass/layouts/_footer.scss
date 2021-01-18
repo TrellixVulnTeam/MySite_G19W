@@ -7,22 +7,22 @@
   z-index: 10;
   @include respond(tab-land) {
     padding: 3rem 0;
-    // clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  @include respond(tab-port) {
+    padding: 2rem 2rem;
   }
   &__container {
     position: relative;
   }
 
   &__navigation {
-    // background-color: white;
     margin-bottom: 8rem;
-    width: 80%;
-
     display: inline-block;
     margin: auto;
     width: 100%;
     @include respond(tab-land) {
       //   width: 100%;
+      margin-top: 2rem;
     }
   }
   &__list {
@@ -38,6 +38,12 @@
     }
     @include respond(tab-land) {
       font-size: 1.4rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
     }
   }
   &__link {
@@ -66,7 +72,6 @@
   &__copyright {
     font-size: 1.3rem;
     // margin: 6rem auto;
-    // background-color: blue;
     text-align: center;
     // margin-top: 6rem;
     margin-top: 5rem;
@@ -74,6 +79,9 @@
     letter-spacing: 0.7px;
     @include respond(tab-land) {
       font-size: 1.15rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1rem;
     }
   }
   &__arrow {
