@@ -25,6 +25,9 @@
   @include respond(tab-land) {
     margin-bottom: 1rem;
   }
+  @include respond(phone) {
+    margin-bottom: 0.3rem;
+  }
 }
 
 .align-center {
@@ -57,6 +60,9 @@
   padding: 2rem 4rem;
   @include respond(tab-land) {
     padding: 1.5rem 3.5rem;
+  }
+  @include respond(phone) {
+    padding: 1.2rem 3.5rem !important;
   }
 }
 

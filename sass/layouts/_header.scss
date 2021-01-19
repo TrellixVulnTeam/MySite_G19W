@@ -26,6 +26,9 @@
     @include respond(tab-port) {
       width: 80%;
     }
+    @include respond(phone) {
+      width: 100%;
+    }
   }
   &__logo-box {
     position: absolute;
@@ -39,9 +42,9 @@
       margin: 2rem;
     }
     @include respond(phone) {
-      top: 0.8rem;
-      left: 0.8rem;
-      margin: 2rem;
+      top: 0.6rem;
+      left: 0.6rem;
+      margin: 1.5rem;
     }
   }
   &__logo {

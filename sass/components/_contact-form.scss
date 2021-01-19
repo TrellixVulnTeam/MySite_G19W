@@ -18,6 +18,12 @@
     width: 80%;
     margin: 2.5rem auto;
   }
+  @include respond(phone) {
+    border-radius: 0px;
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 2rem;
+  }
   &__group {
     margin-bottom: 2rem;
   }
@@ -38,6 +44,12 @@
     margin: auto;
     border-bottom: 0.3rem solid transparent;
     transition: all 0.6s;
+
+    @include respond(phone) {
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 1rem 1.1rem;
+    }
   }
   // to design placeholder (pseudo element). webkit is necessary and it currently works only on safari and chrome
   &::-webkit-input-placeholder {
@@ -84,6 +96,10 @@
     letter-spacing: 0.4px;
     background-color: lighten($color-secondary, $amount: 10%);
     color: white;
+    @include respond(phone) {
+      margin-left: 1rem;
+      padding: 1rem 4.5rem;
+    }
 
     &:hover {
       background-color: $color-secondary;
@@ -93,8 +109,13 @@
 
     &__icon {
       position: absolute;
-      top: 2;
-      right: 2;
+      top: 1.9rem;
+      left: 3rem;
+      font-size: 1.2rem;
+      @include respond(phone) {
+        top: 1rem;
+        left: 2rem;
+      }
     }
   }
 }
@@ -112,6 +133,9 @@
   @include respond(tab-port) {
     margin: 1% auto 12% auto;
   }
+  @include respond(phone) {
+    margin: 0% auto 15% auto;
+  }
 
   &__paragraph {
     font-size: 1.6rem;
@@ -122,6 +146,11 @@
     position: relative;
     padding: 2rem 3rem;
     color: $color-secondary-dark;
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+      margin: 1.2rem;
+    }
 
     &__icon {
       position: absolute;

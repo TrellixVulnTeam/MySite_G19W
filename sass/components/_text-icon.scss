@@ -3,4 +3,8 @@
   color: $color-icon;
   font-size: 3rem;
   margin-left: 1rem;
+  @include respond(phone) {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
 }

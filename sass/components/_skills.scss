@@ -8,7 +8,7 @@
   background-color: $color-secondary-dark;
   // background-color: $color-secondary;
   box-shadow: 0 2rem 4rem;
-  border-radius: 22%;
+  border-radius: 20%;
   margin-top: 2rem;
   @include respond(tab-land) {
     border-radius: 10%;
@@ -20,6 +20,14 @@
     height: 60rem;
     border-radius: 2%;
     width: 50rem;
+    margin: auto;
+    margin-top: 2rem;
+  }
+
+  @include respond(phone) {
+    height: 40rem;
+    border-radius: 2%;
+    width: 90%;
     margin: auto;
     margin-top: 2rem;
   }
@@ -50,12 +58,22 @@
     left: $small-dist;
     animation: animateHt 40s linear infinite;
     backface-visibility: hidden;
+    @include respond(phone) {
+      animation: none;
+      top: 2rem;
+      left: 2rem;
+    }
   }
   &--cs {
     top: $small-dist;
     right: $small-dist;
     animation: animateCs 40s linear infinite;
     backface-visibility: hidden;
+    @include respond(phone) {
+      animation: none;
+      top: 2rem;
+      right: 2rem;
+    }
   }
 
   &--js {
@@ -63,12 +81,22 @@
     left: $small-dist;
     animation: animateJs 40s linear infinite;
     backface-visibility: hidden;
+    @include respond(phone) {
+      animation: none;
+      top: 27rem;
+      left: 1rem;
+    }
   }
   &--fb {
     top: $large-dist;
     right: $small-dist;
     animation: animateFb 40s linear infinite;
     backface-visibility: hidden;
+    @include respond(phone) {
+      animation: none;
+      top: 27rem;
+      right: 2rem;
+    }
   }
   &--rc {
     top: 20rem;
@@ -78,6 +106,10 @@
     @include respond(tab-land) {
       top: 22rem;
       left: 36%;
+    }
+    @include respond(phone) {
+      top: 12rem;
+      left: 32%;
     }
   }
 
@@ -105,9 +137,15 @@
       font-size: 12rem;
       color: #5fd3f3;
       animation: animateRc 40s infinite;
+      backface-visibility: hidden;
 
       @include respond(tab-land) {
         font-size: 10rem;
+      }
+
+      @include respond(phone) {
+        font-size: 10rem;
+        animation: animateRc 20s infinite;
       }
     }
   }

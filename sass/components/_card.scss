@@ -4,15 +4,11 @@
   position: relative;
   border-radius: 3px;
   height: $card-height;
-  @include respond(tab-land) {
-    // &:first-child {
-    //   margin-left: 2rem;
-    // }
-  }
-  @include respond(tab-port) {
-    max-width: 40rem;
-    margin: auto;
-  }
+
+  // @include respond(tab-port) {
+  //   max-width: 40rem;
+  //   margin: auto;
+  // }
 
   &__side {
     height: $card-height;
@@ -98,7 +94,10 @@
     height: 20rem;
     background-blend-mode: saturation;
     @include respond(tab-port) {
-      height: 23rem;
+      height: 27rem;
+    }
+    @include respond(phone) {
+      height: 20rem;
     }
 
     &--1 {
@@ -171,15 +170,6 @@
     right: 3rem;
     text-align: right;
     width: 55%;
-    @include respond(tab-land) {
-      // display: none;
-      font-size: 2rem;
-    }
-
-    @include respond(tab-port) {
-      // display: none;
-      font-size: 2.8rem;
-    }
   }
 
   &__heading-span {
@@ -251,21 +241,7 @@
         &:not(:last-child) {
           border-bottom: 0.1rem solid $color-white;
         }
-
-        @include respond(tab-land) {
-          font-size: 1.2rem;
-        }
-        @include respond(tab-port) {
-          font-size: 1.4rem;
-        }
       }
-    }
-
-    @include respond(tab-land) {
-      padding: 2.5rem;
-    }
-    @include respond(tab-port) {
-      padding: 1.5rem;
     }
   }
 
@@ -288,6 +264,150 @@
     left: 2rem;
     &--rotate {
       transform: rotate(45deg);
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////////
+
+  // card re-write for small devices
+
+  @include respond(tab-land) {
+    height: auto;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    border-radius: 3px;
+    width: 100%;
+
+    &__side {
+      position: relative;
+      height: auto;
+
+      &--back {
+        transform: rotateY(0);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+    &__heading {
+      font-size: 2.2rem;
+    }
+    &__details {
+      padding: 0.2rem;
+      // font-size: 0;
+    }
+
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      padding: 7%;
+      line-height: 3rem;
+      font-size: 1.4rem;
+      &__desc {
+        letter-spacing: 0.7px;
+      }
+      &__btn-container {
+        text-align: center;
+        margin: 2rem 0 0 0;
+      }
+    }
+    &__cta__icon {
+      position: absolute;
+      font-size: 1.6rem;
+      top: 1rem;
+      left: 2rem;
+      &--rotate {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  /////////////////////////////////
+
+  @include respond(tab-port) {
+    width: 70%;
+    margin: auto;
+
+    &__heading {
+      font-size: 2.3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $color-white;
+      position: absolute;
+      top: 18rem;
+      right: 3rem;
+      text-align: right;
+      width: 33%;
+    }
+
+    &__cta {
+      font-size: 1.3rem;
+      &__desc {
+        letter-spacing: 0.7px;
+      }
+      &__btn-container {
+        text-align: center;
+        margin: 3rem 0 0 0;
+        // background-color: black;
+      }
+    }
+    &__cta__icon {
+      position: absolute;
+      font-size: 1.6rem;
+      top: 1rem;
+      left: 2rem;
+      &--rotate {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  @include respond(phone) {
+    width: 100%;
+
+    &__heading {
+      font-size: 2rem;
+      top: 12rem;
+      right: 2rem;
+      width: 50%;
+    }
+
+    &__details {
+      ul {
+        li {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    &__heading-span {
+      padding: 1rem 1rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    &__cta {
+      font-size: 1.3rem;
+      &__desc {
+        letter-spacing: 0.7px;
+      }
+      &__btn-container {
+        text-align: center;
+        margin: 1rem 0 0 0;
+      }
+    }
+    &__cta__icon {
+      position: absolute;
+      font-size: 1.3rem;
+      top: 1.1rem;
+      left: 2rem;
+      &--rotate {
+        transform: rotate(45deg);
+      }
     }
   }
 }
