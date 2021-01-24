@@ -860,7 +860,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     top: 12rem;
     right: 3rem;
     text-align: right;
-    width: 55%; }
+    width: 65%; }
   .card__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
@@ -1030,7 +1030,6 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     border: none;
     font-size: 1.5rem;
     padding: 1.5rem 2rem;
-    border-radius: 2rem;
     background-color: rgba(255, 255, 255, 0.7);
     width: 90%;
     display: block;
