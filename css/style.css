@@ -429,6 +429,12 @@ body {
     100% {
       transform: translate(0rem, 0rem); } } }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 /*
 0 - 600px :  Phone
 600px - 900px :  Tablet portrait
@@ -1079,7 +1085,8 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     margin-left: 2rem;
     letter-spacing: 0.4px;
     background-color: #407790;
-    color: white; }
+    color: white;
+    outline: none; }
     @media (max-width: 37.5em) {
       .contact-form__btn {
         margin-left: 1rem;
@@ -1134,6 +1141,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   text-align: center; }
 
 .pop-up {
+  visibility: hidden;
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);

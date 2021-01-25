@@ -96,6 +96,7 @@
     letter-spacing: 0.4px;
     background-color: lighten($color-secondary, $amount: 10%);
     color: white;
+    outline: none;
     @include respond(phone) {
       margin-left: 1rem;
       padding: 1rem 4.5rem;
