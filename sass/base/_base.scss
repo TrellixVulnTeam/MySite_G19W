@@ -22,6 +22,7 @@ body {
   line-height: 1.7;
   color: $color-grey;
   padding: 2.2rem;
+  position: relative;
 
   // media-query
   @include respond(tab-land) {
@@ -30,4 +31,9 @@ body {
   @include respond(tab-port) {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: $color-primary-light;
+  color: $color-white;
 }
