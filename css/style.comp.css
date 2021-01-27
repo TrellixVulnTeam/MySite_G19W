@@ -202,7 +202,7 @@ body {
       letter-spacing: 0.06rem; } }
   @media (max-width: 37.5em) {
     .heading-tertiary {
-      font-size: 1.33rem;
+      font-size: 1.2rem;
       letter-spacing: 0.06rem; } }
 
 .paragraph {
@@ -218,7 +218,7 @@ body {
       font-size: 1.5rem; } }
   @media (max-width: 37.5em) {
     .paragraph {
-      font-size: 1.32rem;
+      font-size: 1.2rem;
       line-height: 3.2rem; } }
 
 @keyframes movInLeft {
@@ -612,7 +612,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
   text-align: center;
   background-color: #212929;
   box-shadow: 0 2rem 4rem;
-  border-radius: 10%;
+  border-radius: 20%;
   margin-top: 2rem; }
   @media (max-width: 75em) {
     .skills-container {
@@ -705,7 +705,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     @media (max-width: 37.5em) {
       .skills-container--rc {
         top: 12rem;
-        left: 31%; } }
+        left: 32%; } }
   .skills-container .skills__photo {
     font-size: 6rem; }
     @media (max-width: 75em) {
@@ -817,7 +817,6 @@ Note : em and rem in media-queries are not affected by our root font-size settin
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -1318,7 +1317,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
       letter-spacing: 0.06rem; } }
   @media (max-width: 37.5em) {
     .heading-tertiary {
-      font-size: 1.33rem;
+      font-size: 1.2rem;
       letter-spacing: 0.06rem; } }
 
 .paragraph {
@@ -1334,7 +1333,7 @@ Note : em and rem in media-queries are not affected by our root font-size settin
       font-size: 1.5rem; } }
   @media (max-width: 37.5em) {
     .paragraph {
-      font-size: 1.32rem;
+      font-size: 1.2rem;
       line-height: 3.2rem; } }
 
 /*
